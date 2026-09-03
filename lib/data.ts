@@ -63,7 +63,7 @@ export const PERSONAL_INFO = {
   positioning: 'Building digital products that turn ideas into real-world experiences.',
   bio: 'Software Engineering student and developer focused on native Android applications (Java, Room DB, MVVM), modern Next.js websites, and data-driven digital growth. I build clean, functional and SEO-optimized digital products.',
   github: 'https://github.com/hamzafazal',
-  linkedin: 'https://linkedin.com/in/hamzafazal',
+  linkedin: 'https://www.linkedin.com/in/hamzafazal-developer/',
   email: 'hhhdeveloper125@gmail.com',
   phone: '+92 323 5391724',
   whatsapp: '+923235391724',

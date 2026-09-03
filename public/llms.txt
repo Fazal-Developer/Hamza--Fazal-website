@@ -1,0 +1,35 @@
+# Muhammad Hamza Fazal
+
+> Software Engineering Student, Native Android App Developer, Web Developer & Digital Marketing SEO Strategist in Pakistan.
+
+## About
+Muhammad Hamza Fazal (also known as Hamza Fazal) is an Android Developer, Next.js Web Developer, and Digital Marketing Specialist based in Islamabad / Rawalpindi, Pakistan. He builds native mobile apps using Java, Room DB, Firebase, and MVVM architecture, alongside responsive web applications built with Next.js, React, TypeScript, and Tailwind CSS.
+
+- Website: https://hamzafazal.deesu.org
+- GitHub: https://github.com/hamzafazal
+- LinkedIn: https://www.linkedin.com/in/hamzafazal-developer/
+- Email: hhhdeveloper125@gmail.com
+- Phone / WhatsApp: +92 323 5391724
+
+## Core Skills & Technologies
+- **Android Mobile Development**: Java, Android Studio, XML UI, Room Database, Firebase & Firestore, MVVM Architecture, Retrofit REST APIs.
+- **Web Development**: Next.js, React, TypeScript, Tailwind CSS, JavaScript (ES6+), WordPress, HTML5/CSS3.
+- **Digital Marketing & Growth**: On-Page & Technical SEO, Keyword Research, Content Strategy, Google Analytics, Conversion Rate Optimization.
+
+## Key Software Projects
+- **Traffic Sign Test & Driving Quiz App**: Android App built with Java & Room DB to prepare users for driving license road sign exams. [Case Study](https://hamzafazal.deesu.org/projects/traffic-quiz)
+- **Matric Guru (Learning Hub)**: 9th & 10th Class Android notes and study portal with Firebase sync. [Case Study](https://hamzafazal.deesu.org/projects/learning-hub)
+- **Safety 24/7 SOS Alert**: Emergency personal safety mobile app with GPS location sharing and SMS alerts. [Case Study](https://hamzafazal.deesu.org/projects/safety-247)
+- **Digital Khata / Shop Manager**: Small business retail ledger and credit management app. [Case Study](https://hamzafazal.deesu.org/projects/digital-khata)
+- **Chicken Supply Manager**: Poultry supply chain inventory and delivery tracking platform. [Case Study](https://hamzafazal.deesu.org/projects/chicken-supply-manager)
+
+## Key Pages
+- Home: https://hamzafazal.deesu.org
+- About: https://hamzafazal.deesu.org/about
+- Projects Catalog: https://hamzafazal.deesu.org/projects
+- Services & Solutions: https://hamzafazal.deesu.org/services
+- Skills Overview: https://hamzafazal.deesu.org/skills
+- Career & Experience: https://hamzafazal.deesu.org/experience
+- Developer Blog: https://hamzafazal.deesu.org/blog
+- Resume / CV: https://hamzafazal.deesu.org/resume
+- Contact: https://hamzafazal.deesu.org/contact

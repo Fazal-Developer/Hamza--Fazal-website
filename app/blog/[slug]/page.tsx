@@ -24,7 +24,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: `${post.title} | Muhammad Hamza Fazal Blog`,
     description: post.excerpt,
-    keywords: [...post.keywords, 'Android Development', 'Next.js', 'Muhammad Hamza Fazal'],
     alternates: {
       canonical: canonicalUrl,
     },

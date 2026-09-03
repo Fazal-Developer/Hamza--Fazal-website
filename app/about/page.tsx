@@ -4,13 +4,55 @@ import { PERSONAL_INFO } from '@/lib/data'
 import { GraduationCap, Code2, Sparkles, CheckCircle2, ArrowUpRight, Award, Target, BookOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About | Hamza Fazal — Android & Web Developer',
-  description: 'Learn more about Muhammad Hamza Fazal, Software Engineering student, Android Developer, Web Developer, and Digital Marketer.',
+  title: 'About | Muhammad Hamza Fazal — Android & Web Developer',
+  description:
+    'Learn more about Muhammad Hamza Fazal, Software Engineering student, Android Developer, Web Developer, and Digital Marketer in Pakistan.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/about`,
+  },
+  openGraph: {
+    title: 'About Muhammad Hamza Fazal — Software Engineer & Developer',
+    description:
+      'Learn more about Muhammad Hamza Fazal, Software Engineering student, Android Developer, Web Developer, and Digital Marketer.',
+    url: `${PERSONAL_INFO.siteUrl}/about`,
+    images: [`${PERSONAL_INFO.siteUrl}/hamza-about-pro.jpg`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Muhammad Hamza Fazal',
+    description:
+      'Software Engineering student, Android Developer, Web Developer, and Digital Marketer.',
+    images: [`${PERSONAL_INFO.siteUrl}/hamza-about-pro.jpg`],
+  },
 }
 
 export default function AboutPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: PERSONAL_INFO.siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: `${PERSONAL_INFO.siteUrl}/about`,
+      },
+    ],
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-5 md:px-8 py-12 md:py-20 space-y-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
       {/* Hero Header */}
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 font-mono text-xs font-bold text-accent">
@@ -18,7 +60,7 @@ export default function AboutPage() {
           <span>ABOUT HAMZA FAZAL</span>
         </div>
         <h1 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl">
-          Developer. Builder. Problem Solver.
+          Muhammad Hamza Fazal — Developer, Builder, Problem Solver
         </h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
           I&apos;m a Software Engineering student and multi-disciplinary developer who loves taking concepts from blank screen to fully functioning Android apps and web platforms.

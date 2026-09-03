@@ -26,24 +26,9 @@ export const metadata: Metadata = {
   },
   description:
     'Official website of Muhammad Hamza Fazal. Native Android App Developer (Java, Room DB, Firebase, MVVM), Next.js Web Developer, and Digital Marketing SEO Strategist in Pakistan.',
-  keywords: [
-    'Muhammad Hamza Fazal',
-    'Hamza Fazal',
-    'Hamza Fazal Android Developer',
-    'Java Android Developer Pakistan',
-    'Next.js Web Developer',
-    'Android App Developer Karachi Islamabad',
-    'Software Engineering Portfolio',
-    'Digital Marketing SEO Specialist Pakistan',
-    'Traffic Quiz Android App',
-    'Learning Hub Android App',
-    'Safety 24/7 Panic Button App',
-    'Digital Khata Udhar Book App',
-    'Chicken Supply Manager',
-  ],
   authors: [{ name: 'Muhammad Hamza Fazal', url: siteUrl }],
   creator: 'Muhammad Hamza Fazal',
-  publisher: 'Muhammad Hamza Fazal Development',
+  publisher: 'Muhammad Hamza Fazal',
   alternates: {
     canonical: siteUrl,
   },
@@ -58,7 +43,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/hamza-hero-pro.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Muhammad Hamza Fazal — Native Android App Developer & Next.js Web Developer',
+        alt: 'Muhammad Hamza Fazal — Android and Web Developer',
       },
     ],
     locale: 'en_US',
@@ -103,11 +88,15 @@ export default function RootLayout({
     givenName: 'Muhammad Hamza',
     familyName: 'Fazal',
     alternateName: 'Hamza Fazal',
-    jobTitle: 'Android Developer | Web Developer | Digital Marketer',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Independent Software Engineering & Freelance Development',
-    },
+    jobTitle: ['Android Developer', 'Web Developer', 'Digital Marketing SEO Strategist'],
+    url: 'https://hamzafazal.deesu.org',
+    image: 'https://hamzafazal.deesu.org/hamza-hero-pro.jpg',
+    sameAs: [
+      'https://github.com/hamzafazal',
+      'https://www.linkedin.com/in/hamzafazal-developer/',
+    ],
+    email: 'hhhdeveloper125@gmail.com',
+    nationality: 'Pakistan',
     knowsAbout: [
       'Android App Development',
       'Java',
@@ -123,12 +112,6 @@ export default function RootLayout({
       'Digital Marketing',
       'Search Engine Optimization (SEO)',
       'Content Strategy',
-    ],
-    url: siteUrl,
-    image: `${siteUrl}/hamza-hero-pro.jpg`,
-    sameAs: [
-      'https://github.com/hamzafazal',
-      'https://linkedin.com/in/hamzafazal',
     ],
   }
 

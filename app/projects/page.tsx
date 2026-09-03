@@ -1,17 +1,78 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PROJECTS } from '@/lib/data'
+import { PROJECTS, PERSONAL_INFO } from '@/lib/data'
 import { Sparkles, ArrowUpRight, Filter } from 'lucide-react'
 import { GithubIcon } from '@/components/icons'
 
 export const metadata: Metadata = {
-  title: 'Projects Catalog | Hamza Fazal — Android & Web Developer',
-  description: 'Explore the full software projects catalog by Muhammad Hamza Fazal, including Android native apps, Next.js web applications, and full-stack systems.',
+  title: 'Projects Catalog | Muhammad Hamza Fazal — Software & Apps',
+  description:
+    'Explore the full software projects catalog by Muhammad Hamza Fazal, including Android native apps (Java, Room DB, MVVM), Next.js web applications, and full-stack business software.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/projects`,
+  },
+  openGraph: {
+    title: 'Projects Catalog | Muhammad Hamza Fazal',
+    description:
+      'Explore Android native apps, Next.js web applications, and full-stack software built by Muhammad Hamza Fazal.',
+    url: `${PERSONAL_INFO.siteUrl}/projects`,
+    images: [`${PERSONAL_INFO.siteUrl}/hamza-hero-pro.jpg`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Projects Catalog — Muhammad Hamza Fazal',
+    description: 'Android native apps, Next.js web applications, and full-stack software.',
+    images: [`${PERSONAL_INFO.siteUrl}/hamza-hero-pro.jpg`],
+  },
 }
 
 export default function ProjectsPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: PERSONAL_INFO.siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: `${PERSONAL_INFO.siteUrl}/projects`,
+      },
+    ],
+  }
+
+  const jsonLdCatalog = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Software Projects by Muhammad Hamza Fazal',
+    itemListElement: PROJECTS.map((project, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': project.category === 'Android' ? 'SoftwareApplication' : 'CreativeWork',
+        name: project.title,
+        description: project.shortDescription,
+        url: `${PERSONAL_INFO.siteUrl}/projects/${project.slug}`,
+      },
+    })),
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-5 md:px-8 py-12 md:py-20 space-y-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCatalog) }}
+      />
+
       {/* Page Header */}
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 font-mono text-xs font-bold text-accent">

@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   return {
     title: `${project.title} — Case Study | Muhammad Hamza Fazal`,
     description: `${project.title} (${project.subtitle}): ${project.shortDescription} Built by Muhammad Hamza Fazal using ${project.tags.join(', ')}.`,
-    keywords: [...project.keywords, ...project.tags, 'Muhammad Hamza Fazal', 'Case Study'],
     alternates: {
       canonical: canonicalUrl,
     },
