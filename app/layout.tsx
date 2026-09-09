@@ -5,6 +5,9 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { PERSONAL_INFO } from '@/lib/data'
+import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
+import { CustomCursor } from '@/components/cursor/custom-cursor'
+import { LoadingScreen } from '@/components/loading-screen'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -142,10 +145,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased selection:bg-foreground selection:text-background min-h-screen flex flex-col bg-background text-foreground`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
+          <SmoothScrollProvider>
+            <LoadingScreen />
+            <CustomCursor />
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

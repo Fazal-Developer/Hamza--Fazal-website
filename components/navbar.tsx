@@ -1,143 +1,187 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Sun, Moon, Menu, X, ArrowUpRight } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { usePathname, useRouter } from 'next/navigation'
+import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { AnimatePresence, motion } from 'motion/react'
 import { PERSONAL_INFO } from '@/lib/data'
+import { lenisRefGlobal } from '@/components/providers/smooth-scroll-provider'
+import { Magnetic } from '@/components/magnetic'
 
-const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/skills', label: 'Skills' },
-  { href: '/services', label: 'Services' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+const SECTION_LINKS = [
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'journey', label: 'Journey' },
+  { id: 'services', label: 'Services' },
+  { id: 'contact', label: 'Contact' },
 ]
+
+function goToSection(id: string, router: ReturnType<typeof useRouter>, isHome: boolean) {
+  if (!isHome) {
+    router.push(`/#${id}`)
+    return
+  }
+  const el = document.getElementById(id)
+  if (!el) return
+  if (lenisRefGlobal.current) {
+    lenisRefGlobal.current.scrollTo(el, { offset: -88, duration: 1.2 })
+  } else {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 
 export function Navbar() {
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
+  const isHome = pathname === '/'
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
+    const handleScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (!isHome) {
+      setActiveSection('')
+      return
+    }
+    const sections = SECTION_LINKS.map((s) => document.getElementById(s.id)).filter(
+      (el): el is HTMLElement => !!el
+    )
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id)
+        })
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    )
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
+  }, [isHome])
+
+  useEffect(() => {
+    document.documentElement.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => {
+      document.documentElement.style.overflow = ''
+    }
+  }, [mobileOpen])
+
+  const handleNavClick = (id: string) => {
+    setMobileOpen(false)
+    goToSection(id, router, isHome)
+  }
+
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-border/80 bg-background/80 backdrop-blur-md py-3 shadow-xs'
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-foreground text-background font-mono font-black text-sm transition-transform group-hover:scale-105 shadow-sm">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
+      <div
+        className={`flex w-full max-w-5xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-5 ${
+          scrolled || mobileOpen
+            ? 'border border-border/80 bg-background/70 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl'
+            : 'border border-transparent bg-transparent'
+        }`}
+      >
+        <Link href="/" className="group flex shrink-0 items-center gap-2.5" data-cursor-hover>
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-background font-mono text-xs font-black transition-transform group-hover:scale-105">
             {PERSONAL_INFO.brandMonogram}
           </div>
-          <span className="font-sans text-base font-extrabold tracking-tight text-foreground">
+          <span className="hidden font-sans text-sm font-extrabold tracking-tight text-foreground sm:block">
             {PERSONAL_INFO.displayName}
           </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 rounded-full border border-border/80 bg-card/80 px-4 py-1.5 backdrop-blur-md shadow-xs">
-          {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href))
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all ${
-                  isActive
-                    ? 'bg-foreground text-background font-bold shadow-xs'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary/60'
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          })}
+        <nav className="hidden items-center gap-0.5 lg:flex">
+          {SECTION_LINKS.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleNavClick(link.id)}
+              data-cursor-hover
+              className={`relative rounded-full px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors ${
+                activeSection === link.id ? 'text-accent' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              {link.label}
+              {activeSection === link.id && (
+                <motion.span
+                  layoutId="nav-active-dot"
+                  className="absolute -bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-accent"
+                />
+              )}
+            </button>
+          ))}
         </nav>
 
-        {/* CTA & Theme Switcher */}
-        <div className="flex items-center gap-3">
-          {/* Theme Toggle Button */}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground hover:bg-secondary transition-colors"
-            aria-label="Toggle theme"
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </button>
+        <div className="flex items-center gap-2.5">
+          <Magnetic className="hidden sm:block">
+            <button
+              onClick={() => handleNavClick('contact')}
+              data-cursor-hover
+              className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-background transition-opacity hover:opacity-90"
+            >
+              <span>Let&apos;s Connect</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </button>
+          </Magnetic>
 
-          {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-2 text-xs font-bold text-background transition-all hover:opacity-90 hover:scale-[1.02] shadow-sm"
-          >
-            <span>Let&apos;s Work Together</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-
-          {/* Mobile Menu Toggle */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground lg:hidden"
-            aria-label="Open navigation menu"
+            onClick={() => setMobileOpen((v) => !v)}
+            data-cursor-hover
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/60 text-foreground lg:hidden"
+            aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileOpen}
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-x-0 top-[65px] z-40 border-b border-border bg-card/95 p-6 backdrop-blur-xl lg:hidden shadow-2xl space-y-4 animate-in fade-in slide-in-from-top-4">
-          <nav className="flex flex-col gap-2">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href))
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
-                    isActive
-                      ? 'bg-foreground text-background font-bold'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            })}
-          </nav>
-
-          <div className="pt-3 border-t border-border">
-            <Link
-              href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-foreground py-3 text-sm font-bold text-background shadow-md"
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 top-0 z-40 flex flex-col justify-center gap-3 bg-background/98 px-8 backdrop-blur-2xl lg:hidden"
+          >
+            {SECTION_LINKS.map((link, i) => (
+              <motion.button
+                key={link.id}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.06 * i, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                onClick={() => handleNavClick(link.id)}
+                className="text-left font-sans text-4xl font-black tracking-tight text-foreground transition-colors hover:text-accent"
+              >
+                {link.label}
+              </motion.button>
+            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.06 * SECTION_LINKS.length, duration: 0.5 }}
+              className="mt-6 flex items-center gap-4 border-t border-border pt-6"
             >
-              <span>Let&apos;s Work Together</span>
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      )}
+              <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="font-mono text-xs font-bold text-muted-foreground">
+                GitHub
+              </a>
+              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="font-mono text-xs font-bold text-muted-foreground">
+                LinkedIn
+              </a>
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="font-mono text-xs font-bold text-muted-foreground">
+                Email
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

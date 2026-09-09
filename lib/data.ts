@@ -253,8 +253,8 @@ export const PROJECTS: Project[] = [
     problem: 'Generic template portfolios fail to convey true technical skills, project depth, and digital marketing capabilities.',
     solution: 'Designed a custom, ultra-clean web experience with Apple/Vercel style minimalism, fast page loads, and rich case studies.',
     features: [
-      'Full Multi-Page Next.js App Router architecture',
-      'Dark and Light theme toggle with next-themes',
+      'Cinematic 3D hero and scroll-driven project showcase built with React Three Fiber',
+      'GSAP ScrollTrigger and Lenis-powered smooth scrolling throughout',
       'Comprehensive SEO metadata, OpenGraph cards, and JSON-LD schemas',
       'Interactive Project Case Studies & Developer Blog',
     ],
