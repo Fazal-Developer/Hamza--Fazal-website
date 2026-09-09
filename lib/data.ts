@@ -10,6 +10,7 @@ export interface Project {
   tags: string[]
   githubUrl?: string
   liveUrl?: string
+  playStoreUrl?: string
   problem: string
   solution: string
   features: string[]
@@ -83,6 +84,7 @@ export const PROJECTS: Project[] = [
     fullDescription: 'Traffic Quiz App is a native Android application built with Java and XML. It provides interactive quizzes, road sign flashcards, timed mock tests, and instant score feedback to help users prepare for official driving license exams.',
     tags: ['Java', 'Android Studio', 'XML', 'Room Database', 'Firebase', 'MVVM'],
     githubUrl: 'https://github.com/hamzafazal/traffic-quiz-app',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hhhdeveloper.trafficquizapp',
     problem: 'Driving license candidates often struggle to memorize dozens of road signs and safety rules without interactive practice materials.',
     solution: 'Engineered an intuitive mobile testing app with category-wise quizzes, real-time score calculation, and local offline persistence via Room DB.',
     features: [
@@ -112,6 +114,7 @@ export const PROJECTS: Project[] = [
     fullDescription: 'Matric Guru (Learning Hub) is a feature-rich Android app published for students. It centralizes 9th & 10th class educational notes, Mathematics, Physics, Chemistry, Biology PDF study guides, and video tutorials into an organized mobile interface with Firebase integration.',
     tags: ['Java', 'Android Studio', 'Firebase', 'Material Design', 'REST APIs'],
     githubUrl: 'https://github.com/hamzafazal/learning-hub-app',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hhhdevelpoer.learning',
     problem: 'Matric students frequently lose track of scattered course PDFs, lecture links, and study announcements across multiple messaging channels.',
     solution: 'Created a centralized Android study portal featuring subject channels, PDF viewer integration, and Firebase push notifications.',
     features: [
@@ -253,8 +256,8 @@ export const PROJECTS: Project[] = [
     problem: 'Generic template portfolios fail to convey true technical skills, project depth, and digital marketing capabilities.',
     solution: 'Designed a custom, ultra-clean web experience with Apple/Vercel style minimalism, fast page loads, and rich case studies.',
     features: [
-      'Cinematic 3D hero and scroll-driven project showcase built with React Three Fiber',
-      'GSAP ScrollTrigger and Lenis-powered smooth scrolling throughout',
+      'GSAP ScrollTrigger cinematic project showcase with Lenis-powered smooth scrolling',
+      'Dark and Light theme toggle with next-themes',
       'Comprehensive SEO metadata, OpenGraph cards, and JSON-LD schemas',
       'Interactive Project Case Studies & Developer Blog',
     ],
@@ -265,6 +268,84 @@ export const PROJECTS: Project[] = [
       'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop',
     ],
     keywords: ['Hamza Fazal Portfolio', 'Next.js Developer Portfolio', 'SEO Developer Website', 'Android Web Developer Pakistan'],
+  },
+  {
+    slug: 'cvforge',
+    title: 'CVForge: PDF & Resume Maker',
+    subtitle: 'Android Resume & PDF Builder App',
+    category: 'Android',
+    status: 'Completed',
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop',
+    shortDescription: 'Android application published on Play Store for building and generating resumes and CVs as PDF documents directly on a mobile device.',
+    fullDescription: 'CVForge is a native Android app for creating professional resumes and CVs and exporting them as PDF files, published under the Deesu Training & Education Network developer account on Google Play.',
+    tags: ['Java', 'Android Studio'],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hhhdeveloper.swiftpdf',
+    problem: 'Job seekers on mobile often lack a fast, native way to put together a clean, exportable resume without a desktop app.',
+    solution: 'Built a native Android resume builder that generates a shareable PDF directly on-device.',
+    features: [
+      'In-app resume/CV building workflow',
+      'PDF export and generation',
+      'Published and available on Google Play',
+    ],
+    architecture: 'Native Android application.',
+    challenges: 'Producing clean, correctly formatted PDF output natively on Android.',
+    learnings: 'Hands-on experience with on-device PDF generation for Android.',
+    screenshots: [
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop',
+    ],
+    keywords: ['CVForge App', 'Android Resume Builder', 'PDF Maker Android App'],
+  },
+  {
+    slug: 'english-grammar-gamified',
+    title: 'Learn English Grammar & Tests',
+    subtitle: 'Gamified English Grammar Practice App',
+    category: 'Android',
+    status: 'Completed',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
+    shortDescription: 'Android application published on Play Store offering gamified English grammar lessons and practice tests.',
+    fullDescription: 'Learn English Grammar & Tests is a native Android learning app that turns English grammar practice into gamified lessons and quizzes, published under the Deesu Training & Education Network developer account on Google Play.',
+    tags: ['Java', 'Android Studio'],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.dten.englishgrammargamified',
+    problem: 'Traditional grammar study material is often dry and disengaging for learners practicing on mobile.',
+    solution: 'Built a gamified quiz-based Android app to make English grammar practice more engaging.',
+    features: [
+      'Gamified grammar lessons and quizzes',
+      'Test-based practice format',
+      'Published and available on Google Play',
+    ],
+    architecture: 'Native Android application.',
+    challenges: 'Structuring grammar content into an engaging, gamified quiz flow.',
+    learnings: 'Experience designing gamified educational content for Android.',
+    screenshots: [
+      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
+    ],
+    keywords: ['Learn English Grammar App', 'Android Grammar Test App', 'Gamified English Learning'],
+  },
+  {
+    slug: 'interactive-math-learn',
+    title: 'Interactive Math Learn & Test',
+    subtitle: 'Gamified Math Practice & Testing App',
+    category: 'Android',
+    status: 'Completed',
+    image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&auto=format&fit=crop',
+    shortDescription: 'Android application published on Play Store offering interactive, gamified math practice and testing.',
+    fullDescription: 'Interactive Math Learn & Test is a native Android learning app for practicing math through interactive, gamified exercises and tests, published under the Deesu Training & Education Network developer account on Google Play.',
+    tags: ['Java', 'Android Studio'],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.dten.mathgamified',
+    problem: 'Students practicing math on mobile often need a more interactive alternative to static worksheets.',
+    solution: 'Built a gamified, interactive Android app for math practice and self-testing.',
+    features: [
+      'Interactive, gamified math exercises',
+      'Test-based practice format',
+      'Published and available on Google Play',
+    ],
+    architecture: 'Native Android application.',
+    challenges: 'Designing interactive math exercises that stay engaging across difficulty levels.',
+    learnings: 'Experience building gamified, interactive learning flows for Android.',
+    screenshots: [
+      'https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&auto=format&fit=crop',
+    ],
+    keywords: ['Interactive Math App', 'Android Math Test App', 'Gamified Math Learning'],
   },
 ]
 

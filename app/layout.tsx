@@ -6,6 +6,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { PERSONAL_INFO } from '@/lib/data'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
+import { PageTransition } from '@/components/providers/page-transition'
 import { CustomCursor } from '@/components/cursor/custom-cursor'
 import { LoadingScreen } from '@/components/loading-screen'
 
@@ -145,12 +146,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased selection:bg-foreground selection:text-background min-h-screen flex flex-col bg-background text-foreground`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <SmoothScrollProvider>
             <LoadingScreen />
             <CustomCursor />
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              <PageTransition>{children}</PageTransition>
+            </main>
             <Footer />
           </SmoothScrollProvider>
         </ThemeProvider>

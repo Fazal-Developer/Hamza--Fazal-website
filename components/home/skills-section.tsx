@@ -1,20 +1,21 @@
-'use client'
-
-import dynamic from 'next/dynamic'
+import { Smartphone, Globe, Database, TrendingUp, Wrench } from 'lucide-react'
 import { SKILL_CATEGORIES } from '@/lib/data'
 import { Reveal } from '@/components/reveal'
+import { TiltCard } from '@/components/tilt-card'
 
-const SkillsScene = dynamic(() => import('@/components/three/skills-scene').then((m) => m.SkillsScene), {
-  ssr: false,
-  loading: () => <div className="h-full w-full animate-pulse rounded-3xl bg-card/40" />,
-})
+const CATEGORY_ICON: Record<string, React.ComponentType<{ className?: string }>> = {
+  'ANDROID DEVELOPMENT': Smartphone,
+  'WEB DEVELOPMENT': Globe,
+  'DATABASE & BACKEND': Database,
+  'DIGITAL MARKETING & GROWTH': TrendingUp,
+  'DEVELOPMENT TOOLS': Wrench,
+}
 
-const CATEGORY_DOT: Record<string, string> = {
-  'ANDROID DEVELOPMENT': 'bg-emerald-500',
-  'WEB DEVELOPMENT': 'bg-cyan-400',
-  'DATABASE & BACKEND': 'bg-indigo-500',
-  'DIGITAL MARKETING & GROWTH': 'bg-amber-500',
-  'DEVELOPMENT TOOLS': 'bg-pink-500',
+const LEVEL_WEIGHT: Record<string, string> = {
+  Core: 'bg-accent',
+  Strong: 'bg-accent/70',
+  'Working Knowledge': 'bg-muted-foreground/50',
+  Learning: 'bg-muted-foreground/30',
 }
 
 export function SkillsSection() {
@@ -22,37 +23,45 @@ export function SkillsSection() {
     <section id="skills" className="relative mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
       <Reveal>
         <h2 className="max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          A technology constellation, mapped by category.
+          Tools I reach for, organized by craft.
         </h2>
         <p className="mt-4 max-w-lg text-sm text-muted-foreground sm:text-base">
-          Hover any node to see the tool and how confidently I use it.
+          Every skill below is one I actively use and ship with, grouped by where it matters most.
         </p>
       </Reveal>
 
-      <Reveal delay={0.1} className="mt-12 h-[480px] overflow-hidden rounded-3xl border border-border bg-card/40 sm:h-[560px] md:h-[640px]">
-        <SkillsScene />
-      </Reveal>
+      <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {SKILL_CATEGORIES.map((cat, i) => {
+          const Icon = CATEGORY_ICON[cat.category] ?? Wrench
+          return (
+            <Reveal key={cat.category} delay={0.05 * i}>
+              <TiltCard maxTilt={4} className="group h-full rounded-3xl border border-border bg-card p-6 transition-colors hover:border-accent/40 md:p-7">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">{cat.category}</h3>
+                </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-        {SKILL_CATEGORIES.map((cat, i) => (
-          <Reveal key={cat.category} delay={0.05 * i}>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <span className={`h-2 w-2 rounded-full ${CATEGORY_DOT[cat.category] ?? 'bg-accent'}`} />
-                <p className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                  {cat.category}
-                </p>
-              </div>
-              <ul className="space-y-1.5">
-                {cat.skills.map((s) => (
-                  <li key={s.name} className="text-xs font-medium text-foreground/80">
-                    {s.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        ))}
+                <ul className="mt-5 space-y-3">
+                  {cat.skills.map((skill) => (
+                    <li key={skill.name} className="flex items-center justify-between gap-3 border-t border-border/60 pt-3 first:border-t-0 first:pt-0">
+                      <span className="text-sm font-medium text-foreground/85 transition-transform group-hover:translate-x-0.5">
+                        {skill.name}
+                      </span>
+                      <span className="flex items-center gap-1.5 shrink-0">
+                        <span className={`h-1.5 w-1.5 rounded-full ${LEVEL_WEIGHT[skill.level] ?? 'bg-accent'}`} />
+                        <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                          {skill.level}
+                        </span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </TiltCard>
+            </Reveal>
+          )
+        })}
       </div>
     </section>
   )

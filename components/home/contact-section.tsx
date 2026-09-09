@@ -37,12 +37,17 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
+    <section id="contact" className="relative mx-auto max-w-7xl overflow-hidden px-5 py-28 md:px-8 md:py-36">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden="true"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 15% 10%, rgba(0,240,255,0.08), transparent 55%)',
+        }}
+      />
       <Reveal>
         <h2 className="max-w-2xl text-4xl font-black leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-          Have an idea?
-          <br />
-          Let&apos;s build it.
+          Let&apos;s build something meaningful.
         </h2>
         <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
           Send a message for Android app development, Next.js web projects, or digital marketing growth

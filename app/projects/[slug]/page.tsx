@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PROJECTS, PERSONAL_INFO } from '@/lib/data'
-import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck, Cpu, AlertTriangle, Lightbulb, Image as ImageIcon } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck, Cpu, AlertTriangle, Lightbulb, Image as ImageIcon, PlayCircle } from 'lucide-react'
 import { GithubIcon } from '@/components/icons'
 
 interface ProjectPageProps {
@@ -113,6 +113,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Links */}
         <div className="flex flex-wrap items-center gap-4 pt-4">
+          {project.playStoreUrl && (
+            <a
+              href={project.playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-xs font-bold text-white shadow-md hover:scale-105 transition-all"
+            >
+              <PlayCircle className="h-4 w-4" />
+              <span>Get it on Play Store</span>
+            </a>
+          )}
           {project.githubUrl && (
             <a
               href={project.githubUrl}

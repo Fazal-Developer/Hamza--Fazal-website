@@ -2,43 +2,29 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
+import { useTheme } from 'next-themes'
 import { PERSONAL_INFO } from '@/lib/data'
-import { lenisRefGlobal } from '@/components/providers/smooth-scroll-provider'
 import { Magnetic } from '@/components/magnetic'
 
-const SECTION_LINKS = [
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'journey', label: 'Journey' },
-  { id: 'services', label: 'Services' },
-  { id: 'contact', label: 'Contact' },
+const NAV_LINKS = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Portfolio' },
+  { href: '/contact', label: 'Contact' },
 ]
-
-function goToSection(id: string, router: ReturnType<typeof useRouter>, isHome: boolean) {
-  if (!isHome) {
-    router.push(`/#${id}`)
-    return
-  }
-  const el = document.getElementById(id)
-  if (!el) return
-  if (lenisRefGlobal.current) {
-    lenisRefGlobal.current.scrollTo(el, { offset: -88, duration: 1.2 })
-  } else {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-}
 
 export function Navbar() {
   const pathname = usePathname()
-  const router = useRouter()
-  const isHome = pathname === '/'
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -47,38 +33,17 @@ export function Navbar() {
   }, [])
 
   useEffect(() => {
-    if (!isHome) {
-      setActiveSection('')
-      return
-    }
-    const sections = SECTION_LINKS.map((s) => document.getElementById(s.id)).filter(
-      (el): el is HTMLElement => !!el
-    )
-    if (sections.length === 0) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id)
-        })
-      },
-      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
-    )
-    sections.forEach((s) => observer.observe(s))
-    return () => observer.disconnect()
-  }, [isHome])
-
-  useEffect(() => {
     document.documentElement.style.overflow = mobileOpen ? 'hidden' : ''
     return () => {
       document.documentElement.style.overflow = ''
     }
   }, [mobileOpen])
 
-  const handleNavClick = (id: string) => {
+  useEffect(() => {
     setMobileOpen(false)
-    goToSection(id, router, isHome)
-  }
+  }, [pathname])
+
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href))
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
@@ -90,45 +55,61 @@ export function Navbar() {
         }`}
       >
         <Link href="/" className="group flex shrink-0 items-center gap-2.5" data-cursor-hover>
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-background font-mono text-xs font-black transition-transform group-hover:scale-105">
-            {PERSONAL_INFO.brandMonogram}
-          </div>
+          <img
+            src="/hamza-hero-pro.jpg"
+            alt={PERSONAL_INFO.displayName}
+            className="h-8 w-8 rounded-lg object-cover ring-1 ring-border transition-transform group-hover:scale-105"
+          />
           <span className="hidden font-sans text-sm font-extrabold tracking-tight text-foreground sm:block">
             {PERSONAL_INFO.displayName}
           </span>
         </Link>
 
         <nav className="hidden items-center gap-0.5 lg:flex">
-          {SECTION_LINKS.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNavClick(link.id)}
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
               data-cursor-hover
-              className={`relative rounded-full px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors ${
-                activeSection === link.id ? 'text-accent' : 'text-muted-foreground hover:text-foreground'
+              className={`relative rounded-full px-4 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider transition-colors ${
+                isActive(link.href) ? 'text-accent' : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               {link.label}
-              {activeSection === link.id && (
+              {isActive(link.href) && (
                 <motion.span
                   layoutId="nav-active-dot"
                   className="absolute -bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-accent"
+                  transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               )}
-            </button>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2.5">
+          <button
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+            data-cursor-hover
+            className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-card/60 text-foreground transition-colors hover:border-accent/50"
+            aria-label="Toggle color theme"
+          >
+            {mounted && resolvedTheme === 'dark' ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
+          </button>
+
           <Magnetic className="hidden sm:block">
-            <button
-              onClick={() => handleNavClick('contact')}
+            <Link
+              href="/contact"
               data-cursor-hover
               className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-background transition-opacity hover:opacity-90"
             >
               <span>Let&apos;s Connect</span>
               <ArrowUpRight className="h-3.5 w-3.5" />
-            </button>
+            </Link>
           </Magnetic>
 
           <button
@@ -151,22 +132,27 @@ export function Navbar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 top-0 z-40 flex flex-col justify-center gap-3 bg-background/98 px-8 backdrop-blur-2xl lg:hidden"
           >
-            {SECTION_LINKS.map((link, i) => (
-              <motion.button
-                key={link.id}
+            {NAV_LINKS.map((link, i) => (
+              <motion.div
+                key={link.href}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.06 * i, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                onClick={() => handleNavClick(link.id)}
-                className="text-left font-sans text-4xl font-black tracking-tight text-foreground transition-colors hover:text-accent"
               >
-                {link.label}
-              </motion.button>
+                <Link
+                  href={link.href}
+                  className={`text-left font-sans text-4xl font-black tracking-tight transition-colors hover:text-accent ${
+                    isActive(link.href) ? 'text-accent' : 'text-foreground'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.06 * SECTION_LINKS.length, duration: 0.5 }}
+              transition={{ delay: 0.06 * NAV_LINKS.length, duration: 0.5 }}
               className="mt-6 flex items-center gap-4 border-t border-border pt-6"
             >
               <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="font-mono text-xs font-bold text-muted-foreground">

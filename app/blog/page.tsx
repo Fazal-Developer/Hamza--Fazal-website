@@ -1,11 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BLOG_POSTS } from '@/lib/data'
+import { BLOG_POSTS, PERSONAL_INFO } from '@/lib/data'
 import { Sparkles, ArrowUpRight, Clock, Calendar } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Blog | Hamza Fazal — Android & Web Development Articles',
   description: 'Articles and insights by Muhammad Hamza Fazal on native Android development, Next.js web applications, and SEO growth strategies.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/blog`,
+  },
+  openGraph: {
+    title: 'Blog | Muhammad Hamza Fazal',
+    description:
+      'Articles on native Android development, Next.js web applications, and SEO growth strategies.',
+    url: `${PERSONAL_INFO.siteUrl}/blog`,
+  },
 }
 
 export default function BlogPage() {

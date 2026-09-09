@@ -9,9 +9,11 @@
 This repository powers the official personal brand, software engineering portfolio, case study index, and developer publication for **Muhammad Hamza Fazal**. The platform is built using a modern, performance-first stack:
 - **Framework:** Next.js 16 (App Router, Turbopack, Static Site Generation)
 - **Frontend Architecture:** React 19, TypeScript 5.7, Tailwind CSS v4, Lucide React
-- **3D & WebGL Engine:** Three.js 0.185.1, `detect-gpu`
-- **State & Theme Management:** `next-themes` (Dark/Light mode support)
+- **Animation & Scroll:** GSAP + ScrollTrigger, Lenis smooth scroll, Motion (Framer Motion)
+- **State & Theme Management:** `next-themes` (Light mode default, Dark mode toggle, persisted via localStorage)
 - **Deployment Platform:** Vercel Edge Global CDN
+
+> **Note:** This project deliberately does not use 3D/WebGL (no Three.js, React Three Fiber, or `detect-gpu`). An earlier iteration explored a Three.js-based cinematic hero and skills constellation; it was removed by explicit product decision in favor of a lighter, faster, 2D animated experience. Do not reintroduce 3D dependencies unless the site owner explicitly asks for them again.
 
 ---
 
@@ -26,18 +28,20 @@ The visual direction reflects an **elite technology & software engineering comma
 
 ---
 
-## 3. 3D Web & Three.js Architecture Protocol
+## 3. Animation & Scroll Protocol
 
-All 3D interactive scenes (e.g., [`components/hero-3d-visual.tsx`](file:///D:/antigravity/deesu/components/hero-3d-visual.tsx)) must adhere strictly to the following standards:
+All scroll/motion work (hero reveals, the GSAP sticky-stack project showcase, the journey timeline, magnetic buttons, tilt cards) must adhere to the following standards:
 
-1. **GPU Capability Detection:**
-   - Always run `detect-gpu` to evaluate client FPS and GPU tier. If hardware acceleration is insufficient, gracefully fallback to a high-contrast 2.5D glass card.
-2. **Memory & Lifecycle Hygiene:**
-   - Geometries, materials, textures, and animation frames must be explicitly disposed of on component unmount (`renderer.dispose()`, `cancelAnimationFrame`).
-3. **Pixel Ratio & Performance Budgets:**
-   - Limit `renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))` to prevent mobile/4K GPU thermal throttling.
-4. **Accessibility Compliance:**
-   - Query `(prefers-reduced-motion: reduce)`. If enabled, freeze camera parallax, orbital rotation, and high-frequency animations.
+1. **Reduced Motion Compliance:**
+   - Query `(prefers-reduced-motion: reduce)` before running any GSAP timeline, ScrollTrigger, or Motion animation. If enabled, skip entrance/parallax animation and render content in its final state.
+2. **Lifecycle Hygiene:**
+   - Every GSAP context/timeline and ScrollTrigger created in a `useEffect` must be reverted/killed in its cleanup function (`gsap.context().revert()`).
+3. **Mobile-Safe Scroll Hijacking:**
+   - GSAP pin/scrub effects (e.g. the projects sticky-stack) must be gated with `ScrollTrigger.matchMedia()` so pinning is desktop-only; mobile gets normal document flow.
+4. **Performance:**
+   - Animate `transform`/`opacity` only where possible. Avoid animating layout-affecting properties (`width`, `height`, `top`) in scroll-scrubbed timelines.
+5. **Theme Transitions:**
+   - Theme switches are handled by `next-themes` + a CSS `transition` on `body`'s background/color; do not add per-component JS-driven theme transition logic.
 
 ---
 
@@ -66,7 +70,7 @@ The project is equipped with an official suite of **14 specialized agent skills*
 ### 4.2 Mandatory Invocation Directive
 > **CRITICAL RULE FOR ALL AGENTS & DEVELOPERS:**  
 > Whenever implementing, refactoring, or optimizing any module in this codebase, you **MUST** consult and invoke the corresponding skill definition from `.agents/skills/<skill-name>/SKILL.md`.  
-> - When touching 3D scenes or WebGL: Read and follow `3d-web-experience` and `threejs-*` skills.  
+> - The `3d-web-experience` and `threejs-*` skills are currently **not applicable** — this project has no 3D/WebGL surface (see Section 1). Leave them installed but do not invoke them unless 3D is explicitly requested again.
 > - When updating UI components, color palettes, or layout: Read and follow `frontend-design` and `design-taste-frontend`.  
 > - When updating pages, routing, layouts, or SEO: Read and follow `nextjs-app-router-patterns`.
 

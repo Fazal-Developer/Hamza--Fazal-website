@@ -6,6 +6,20 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/skills',
+        destination: '/about#technologies',
+        permanent: true,
+      },
+      {
+        source: '/experience',
+        destination: '/about#journey',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

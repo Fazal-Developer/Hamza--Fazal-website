@@ -6,6 +6,15 @@ import { Download, Sparkles, Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight
 export const metadata: Metadata = {
   title: 'Digital Resume / CV | Hamza Fazal — Software Developer',
   description: 'Official digital resume and CV of Muhammad Hamza Fazal, Software Engineering student, Android Developer, Web Developer, and Digital Marketer.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/resume`,
+  },
+  openGraph: {
+    title: 'Digital Resume / CV | Muhammad Hamza Fazal',
+    description:
+      'Official digital resume of Muhammad Hamza Fazal, Android Developer, Web Developer, and Digital Marketer.',
+    url: `${PERSONAL_INFO.siteUrl}/resume`,
+  },
 }
 
 export default function ResumePage() {
