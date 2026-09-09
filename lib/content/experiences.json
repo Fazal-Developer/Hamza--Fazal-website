@@ -1,0 +1,38 @@
+[
+  {
+    "period": "2022 — Present",
+    "role": "Software Engineering Student & Independent Developer",
+    "organization": "Independent Projects & Studies",
+    "category": "Software Engineering",
+    "description": "Focusing on core Software Engineering principles, data structures, Android app development, and modern web frameworks.",
+    "highlights": [
+      "Built and published Android apps including Traffic Quiz App and Learning Hub.",
+      "Developed full-stack business management systems like Digital Khata and Chicken Supply Manager.",
+      "Constructed modern React & Next.js websites deployed on Vercel."
+    ]
+  },
+  {
+    "period": "2023 — Present",
+    "role": "Freelance Android & Web Developer",
+    "organization": "Client Work & Digital Solutions",
+    "category": "Freelance / Client Work",
+    "description": "Delivering custom mobile apps, business websites, and digital marketing consulting for local businesses and clients.",
+    "highlights": [
+      "Built custom Android applications tailored to specific business workflows.",
+      "Developed responsive WordPress and Next.js sites with integrated SEO.",
+      "Provided end-to-end support from UI design to production deployment."
+    ]
+  },
+  {
+    "period": "2023 — Present",
+    "role": "Digital Marketing & SEO Strategist",
+    "organization": "Digital Growth Projects",
+    "category": "Digital Marketing",
+    "description": "Executing SEO campaigns, keyword research, content strategies, and online presence optimization.",
+    "highlights": [
+      "Optimized client websites for top Google search visibility.",
+      "Implemented data-driven content marketing and keyword targeting.",
+      "Configured Google Analytics & Search Console tracking."
+    ]
+  }
+]

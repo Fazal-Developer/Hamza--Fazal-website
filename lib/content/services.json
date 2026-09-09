@@ -1,0 +1,82 @@
+[
+  {
+    "id": "android-dev",
+    "iconName": "Smartphone",
+    "title": "Android App Development",
+    "description": "Custom native Android applications built with Java, XML, and modern Android architecture. From idea to Play Store publishing.",
+    "deliverables": [
+      "Native Java Android App",
+      "Clean MVVM Architecture & Room DB",
+      "Firebase Backend Integration",
+      "Material 3 UI/UX Design",
+      "Google Play Store Publishing Support"
+    ],
+    "keywords": ["Android App Development Pakistan", "Native Java Android Developer", "Room DB MVVM Android"]
+  },
+  {
+    "id": "web-dev",
+    "iconName": "Globe",
+    "title": "Website Development",
+    "description": "Fast, responsive, and modern websites for business brands, products, and portfolios built using Next.js, React, and WordPress.",
+    "deliverables": [
+      "Responsive Next.js / React Web App",
+      "WordPress Custom Sites",
+      "Mobile-first Responsive Design",
+      "Speed & Performance Optimization",
+      "Vercel & Domain Deployment"
+    ],
+    "keywords": ["Next.js Web Developer Pakistan", "React Website Development", "WordPress Developer Islamabad"]
+  },
+  {
+    "id": "ui-ux",
+    "iconName": "Layout",
+    "title": "UI/UX Implementation",
+    "description": "Turning design wireframes and concepts into pixel-perfect, highly accessible responsive interfaces.",
+    "deliverables": [
+      "Figma to Code Conversion",
+      "Micro-interactions & Animations",
+      "Accessibility & Cross-browser Compatibility",
+      "Dark & Light Mode Integration"
+    ],
+    "keywords": ["Figma to React", "UI UX Mobile Implementation", "Responsive Web Design"]
+  },
+  {
+    "id": "firebase-integration",
+    "iconName": "Flame",
+    "title": "Firebase & Backend Integration",
+    "description": "Cloud authentication, realtime databases, push notifications, and storage setup for mobile and web apps.",
+    "deliverables": [
+      "Firebase User Authentication",
+      "Firestore & Realtime DB Schema",
+      "Cloud Storage for Images & Files",
+      "FCM Push Notifications Integration"
+    ],
+    "keywords": ["Firebase Integration Android", "Firestore Realtime DB Developer", "FCM Push Notifications"]
+  },
+  {
+    "id": "digital-marketing",
+    "iconName": "TrendingUp",
+    "title": "Digital Marketing & SEO",
+    "description": "SEO-focused growth strategies to help your digital products, apps, and websites reach the right target audience.",
+    "deliverables": [
+      "Comprehensive On-Page & Technical SEO",
+      "Keyword Research & Competitor Analysis",
+      "Content & Growth Marketing Strategy",
+      "Google Analytics & Search Console Setup"
+    ],
+    "keywords": ["SEO Digital Marketing", "Search Engine Optimization Pakistan", "Google Analytics Setup"]
+  },
+  {
+    "id": "website-optimization",
+    "iconName": "Zap",
+    "title": "Website Optimization",
+    "description": "Improving performance, loading speeds, mobile responsiveness, and conversion rates of existing websites.",
+    "deliverables": [
+      "Core Web Vitals Speed Boost",
+      "Mobile Responsiveness Fixes",
+      "SEO Audit & Meta Tag Fixes",
+      "User Experience & CTA Enhancements"
+    ],
+    "keywords": ["Core Web Vitals Optimization", "Page Speed Optimization", "Mobile Responsiveness Fix"]
+  }
+]

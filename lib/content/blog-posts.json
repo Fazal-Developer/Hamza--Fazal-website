@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "android-development-guide",
+    "title": "Building Robust Android Apps with MVVM & Room Database",
+    "category": "Android",
+    "date": "August 18, 2026",
+    "readTime": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop",
+    "excerpt": "A practical exploration of how MVVM architecture paired with Room DB creates maintainable, offline-first Android applications.",
+    "content": [
+      "Architecting Android applications requires a clean separation of concerns. The Model-View-ViewModel (MVVM) pattern combined with Room Persistence Library provides an ideal framework for building scalable apps.",
+      "### Why MVVM Matters",
+      "By decoupling your business logic from Activity and Fragment lifecycle events, MVVM prevents memory leaks and ensures your UI remains responsive during background tasks.",
+      "### Offline-First Persistence with Room",
+      "Room acts as an abstraction layer over SQLite, allowing compile-time SQL verification and seamless integration with LiveData for reactive UI updates when local data changes.",
+      "### Conclusion",
+      "Adopting MVVM early in your Android development workflow pays massive dividends in code readability, testability, and app reliability."
+    ],
+    "keywords": ["Android MVVM Architecture", "Room Database Java Tutorial", "Android Offline First App"]
+  },
+  {
+    "slug": "nextjs-portfolio-best-practices",
+    "title": "Designing High-Performance Developer Portfolios with Next.js",
+    "category": "Web Development",
+    "date": "August 10, 2026",
+    "readTime": "4 min read",
+    "coverImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+    "excerpt": "Key strategies for building minimalist, fast, and SEO-friendly personal developer portfolios using Next.js App Router.",
+    "content": [
+      "Your developer portfolio is your digital handshake. Building it with Next.js ensures top-notch performance, automatic image optimization, and strong SEO search visibility.",
+      "### Minimalist UI Design Philosophy",
+      "Avoid distracting neon clutter and excessive animations. Focus on typography, clean spacing, high-contrast dark/light themes, and clear project case studies.",
+      "### Structuring Case Studies",
+      "Presenting projects with clear Problem, Solution, Architecture, and Key Learnings sections demonstrates real-world software engineering depth.",
+      "### Deployment on Vercel",
+      "Deploying directly on Vercel provides instant SSL, global CDN edge caching, and effortless custom domain routing."
+    ],
+    "keywords": ["Next.js Portfolio Design", "Developer Website SEO", "Vercel Deployment Next.js"]
+  },
+  {
+    "slug": "seo-strategies-for-digital-products",
+    "title": "Practical SEO & Growth Strategies for New Software Products",
+    "category": "Digital Marketing",
+    "date": "August 02, 2026",
+    "readTime": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    "excerpt": "How developers can integrate keyword research, technical SEO, and structured schema microdata into their web projects.",
+    "content": [
+      "Building a great software product is only half the battle. Implementing SEO best practices ensures your target audience can actually find it on Google.",
+      "### On-Page & Technical Fundamentals",
+      "Ensure every page has unique meta titles, descriptions, canonical URLs, semantic H1/H2 tags, and XML sitemap configuration.",
+      "### Harnessing Schema Microdata",
+      "JSON-LD schemas help search engines understand the exact context of your personal brand, software services, and blog articles for rich result cards.",
+      "### Sustainable Organic Growth",
+      "Consistent, helpful content targeting high-intent search queries yields sustainable long-term organic traffic."
+    ],
+    "keywords": ["SEO Strategies Developers", "Technical SEO Schema Microdata", "Digital Product Growth"]
+  }
+]

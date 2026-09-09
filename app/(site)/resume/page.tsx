@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PERSONAL_INFO, PROJECTS, SKILL_CATEGORIES, EXPERIENCES } from '@/lib/data'
-import { Download, Sparkles, Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight, CheckCircle2 } from 'lucide-react'
+import { Download, Sparkles, Mail, Phone, MapPin, ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Digital Resume / CV | Hamza Fazal — Software Developer',

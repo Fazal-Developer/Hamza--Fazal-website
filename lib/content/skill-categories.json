@@ -1,0 +1,58 @@
+[
+  {
+    "category": "ANDROID DEVELOPMENT",
+    "skills": [
+      { "name": "Java", "level": "Core" },
+      { "name": "Android Studio", "level": "Core" },
+      { "name": "XML UI Design", "level": "Core" },
+      { "name": "Material Design", "level": "Strong" },
+      { "name": "Room Database", "level": "Strong" },
+      { "name": "Firebase & Firestore", "level": "Strong" },
+      { "name": "MVVM Architecture", "level": "Strong" },
+      { "name": "REST APIs & Retrofit", "level": "Working Knowledge" }
+    ]
+  },
+  {
+    "category": "WEB DEVELOPMENT",
+    "skills": [
+      { "name": "HTML5 & CSS3", "level": "Core" },
+      { "name": "JavaScript (ES6+)", "level": "Core" },
+      { "name": "React", "level": "Strong" },
+      { "name": "Next.js", "level": "Strong" },
+      { "name": "Tailwind CSS", "level": "Strong" },
+      { "name": "WordPress", "level": "Strong" },
+      { "name": "Responsive Web Design", "level": "Core" }
+    ]
+  },
+  {
+    "category": "DATABASE & BACKEND",
+    "skills": [
+      { "name": "Firebase Auth & Storage", "level": "Strong" },
+      { "name": "Cloud Firestore", "level": "Strong" },
+      { "name": "Realtime Database", "level": "Strong" },
+      { "name": "Room Persistence Library", "level": "Strong" },
+      { "name": "RESTful API Integration", "level": "Strong" }
+    ]
+  },
+  {
+    "category": "DIGITAL MARKETING & GROWTH",
+    "skills": [
+      { "name": "Search Engine Optimization (SEO)", "level": "Core" },
+      { "name": "Content Strategy", "level": "Strong" },
+      { "name": "Keyword Research", "level": "Strong" },
+      { "name": "Google Analytics & Insights", "level": "Strong" },
+      { "name": "Conversion Optimization", "level": "Working Knowledge" },
+      { "name": "Social Media Marketing", "level": "Strong" }
+    ]
+  },
+  {
+    "category": "DEVELOPMENT TOOLS",
+    "skills": [
+      { "name": "Git & GitHub", "level": "Strong" },
+      { "name": "Vercel Deployment", "level": "Strong" },
+      { "name": "Android Studio Suite", "level": "Core" },
+      { "name": "Figma & UI Prototyping", "level": "Working Knowledge" },
+      { "name": "VS Code", "level": "Core" }
+    ]
+  }
+]
