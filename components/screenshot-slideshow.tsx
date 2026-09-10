@@ -47,19 +47,29 @@ export function ScreenshotSlideshow({ images, alt }: ScreenshotSlideshowProps) {
 
   return (
     <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-md">
-      <div className="relative aspect-video w-full">
+      <div className="relative h-[420px] w-full sm:h-[480px] md:h-[560px]">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
-          <motion.img
+          <motion.div
             key={index}
-            src={images[index]}
-            alt={`${alt} ${index + 1}`}
             custom={direction}
             initial={{ x: direction >= 0 ? '100%' : '-100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: direction >= 0 ? '-100%' : '100%', opacity: 0 }}
             transition={{ type: 'tween', duration: 0.45, ease: [0.65, 0, 0.35, 1] }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+            className="absolute inset-0"
+          >
+            <img
+              src={images[index]}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-2xl"
+            />
+            <img
+              src={images[index]}
+              alt={`${alt} ${index + 1}`}
+              className="relative h-full w-full object-contain"
+            />
+          </motion.div>
         </AnimatePresence>
 
         {images.length > 1 && (
