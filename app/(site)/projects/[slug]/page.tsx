@@ -76,7 +76,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-5 md:px-8 py-12 md:py-20 space-y-16">
+    <div className="mx-auto max-w-5xl px-5 pb-12 pt-28 md:px-8 md:pb-20 md:pt-36 space-y-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
