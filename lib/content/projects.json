@@ -8,8 +8,14 @@
     "image": "/poster-traffic-quiz.jpg",
     "shortDescription": "Comprehensive Android application published on Play Store designed to help driving license applicants prepare for road sign & traffic law exams.",
     "fullDescription": "Traffic Quiz App is a native Android application built with Java and XML. It provides interactive quizzes, road sign flashcards, timed mock tests, and instant score feedback to help users prepare for official driving license exams.",
-    "tags": ["Java", "Android Studio", "XML", "Room Database", "Firebase", "MVVM"],
-    "githubUrl": "https://github.com/hamzafazal/traffic-quiz-app",
+    "tags": [
+      "Java",
+      "Android Studio",
+      "XML",
+      "Room Database",
+      "Firebase",
+      "MVVM"
+    ],
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hhhdeveloper.trafficquizapp",
     "problem": "Driving license candidates often struggle to memorize dozens of road signs and safety rules without interactive practice materials.",
     "solution": "Engineered an intuitive mobile testing app with category-wise quizzes, real-time score calculation, and local offline persistence via Room DB.",
@@ -25,9 +31,17 @@
     "learnings": "Mastered Room Database migrations, LiveData observer patterns, and efficient image caching in Android Studio.",
     "screenshots": [
       "/poster-traffic-quiz.jpg",
-      "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop"
+      "https://play-lh.googleusercontent.com/oHISKhzudYx1rWpQK0wBKE-Mf_836dmmpzyYaBnsBeCMjEzqP5a9F3AcYX-n3DRcPf7bSey8HRoa-ygzqHku=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/eEAHSgU0EH2skb4BSmcnZL-JTlQb2f9HKuAJ3A6ttHQBjLRysL70dtkXwHlVAv9jOsxLzh8TDx6-qnkS73OMfA=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/gAKoW8K2jEO-DdzFMpEsL-QuznIrgkiibjSmDtMekeSWOwzldweyVz2A6RnwM4Pi8d8kfPytnWJh7AOmBd2_lg=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/n8giJFQqJL8UWqZ98GmJTXyP_3CUm0YhKaaKqCclngWz-68yfWn1WI-SolU17Op6wBgGoxdOJ_uyMVvD6lre-A=w960-h540-rw"
     ],
-    "keywords": ["Traffic Quiz App", "Android Driving License App", "Java Traffic Sign Test", "Room DB Quiz App"]
+    "keywords": [
+      "Traffic Quiz App",
+      "Android Driving License App",
+      "Java Traffic Sign Test",
+      "Room DB Quiz App"
+    ]
   },
   {
     "slug": "learning-hub",
@@ -38,8 +52,13 @@
     "image": "/poster-matric-guru.jpg",
     "shortDescription": "Matric Guru is a mobile learning portal allowing 9th & 10th class students to access subject lectures, course notes, and past paper tutorials.",
     "fullDescription": "Matric Guru (Learning Hub) is a feature-rich Android app published for students. It centralizes 9th & 10th class educational notes, Mathematics, Physics, Chemistry, Biology PDF study guides, and video tutorials into an organized mobile interface with Firebase integration.",
-    "tags": ["Java", "Android Studio", "Firebase", "Material Design", "REST APIs"],
-    "githubUrl": "https://github.com/hamzafazal/learning-hub-app",
+    "tags": [
+      "Java",
+      "Android Studio",
+      "Firebase",
+      "Material Design",
+      "REST APIs"
+    ],
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hhhdevelpoer.learning",
     "problem": "Matric students frequently lose track of scattered course PDFs, lecture links, and study announcements across multiple messaging channels.",
     "solution": "Created a centralized Android study portal featuring subject channels, PDF viewer integration, and Firebase push notifications.",
@@ -54,9 +73,17 @@
     "learnings": "Deepened expertise in Android Background Service tasks, Firebase Firestore, and Material 3 UI components.",
     "screenshots": [
       "/poster-matric-guru.jpg",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+      "https://play-lh.googleusercontent.com/x2CgSqP0EzOySiLOpk6-tSdpYDnlFd_ptPcgOx9zhqzjji9SJMKpO1zG0Ubfmiy4jz4icpNrdRnDroINygBH=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/Lq_pDLoni_JLn8hy309vV6xSkqJyFHv0bdmpFTzYldi4GN2SI4uVyVDVOw2-ZN3AWpPzGSW6huv2dnwD5ZtSAg=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/fRRdxCDwyN1zUbniV-KgzquMctqlU1O-GKuxOX_kB0zyQFTB-FlYElUc9ReiG89dyHUPC9WkXFSdmHF7wLx4NQ=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/KQomlUgMjYXLwO3JcDYSK7cbp5LKkJsEiq9pLbB0RjkX0MHFjSTjTiqngg15IzIZDcUiAclkdHRTuV7RZh7woQ=w960-h540-rw"
     ],
-    "keywords": ["Matric Guru App", "9th 10th Class Study Notes", "Android Learning Hub", "Java Student Notes App"]
+    "keywords": [
+      "Matric Guru App",
+      "9th 10th Class Study Notes",
+      "Android Learning Hub",
+      "Java Student Notes App"
+    ]
   },
   {
     "slug": "safety-247",
@@ -67,8 +94,13 @@
     "image": "/poster-safety-247.jpg",
     "shortDescription": "Personal safety app enabling one-tap emergency SOS alerts, live GPS location sharing, and emergency contact triggers.",
     "fullDescription": "Safety 24/7 is a critical mobile utility built for personal emergency assistance. In dangerous situations, users can trigger an SOS panic button that automatically sends SMS alerts with live GPS coordinates to pre-configured trusted contacts.",
-    "tags": ["Java", "Android Studio", "Location API", "SMS Manager", "Room DB"],
-    "githubUrl": "https://github.com/hamzafazal/safety-247-app",
+    "tags": [
+      "Java",
+      "Android Studio",
+      "Location API",
+      "SMS Manager",
+      "Room DB"
+    ],
     "problem": "People in emergency situations often cannot unlock their phone and type a full distress message in time.",
     "solution": "Designed a one-tap panic button system that retrieves current GPS location coordinates and sends instant SMS broadcasts.",
     "features": [
@@ -84,7 +116,12 @@
       "/poster-safety-247.jpg",
       "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=800&auto=format&fit=crop"
     ],
-    "keywords": ["Safety 24/7 App", "Android SOS Panic Button", "Emergency Location SMS App", "Java Safety App"]
+    "keywords": [
+      "Safety 24/7 App",
+      "Android SOS Panic Button",
+      "Emergency Location SMS App",
+      "Java Safety App"
+    ]
   },
   {
     "slug": "chicken-supply-manager",
@@ -95,8 +132,13 @@
     "image": "/poster-chicken-supply.jpg",
     "shortDescription": "Business management system for tracking poultry farm yields, supplier orders, daily sales, and delivery logs.",
     "fullDescription": "Chicken Supply Manager is a tailored management application for poultry suppliers. It simplifies daily stock tracking, customer orders, payment ledgers, and delivery receipts into an intuitive dashboard.",
-    "tags": ["Java", "Android", "Firebase", "Next.js", "Tailwind CSS"],
-    "githubUrl": "https://github.com/hamzafazal/chicken-supply-manager",
+    "tags": [
+      "Java",
+      "Android",
+      "Firebase",
+      "Next.js",
+      "Tailwind CSS"
+    ],
     "problem": "Local poultry distributors relied on manual paper registers, leading to billing errors, missing stock records, and uncollected debts.",
     "solution": "Digitized the supply chain pipeline with an Android mobile app for drivers and a web dashboard for management.",
     "features": [
@@ -108,8 +150,15 @@
     "architecture": "Android mobile app & Next.js Web Dashboard powered by shared Firebase Firestore database.",
     "challenges": "Designing a clear UI tailored for non-technical warehouse operators.",
     "learnings": "Enhanced skills in multi-platform data synchronization and financial ledger calculations.",
-    "screenshots": ["/poster-chicken-supply.jpg"],
-    "keywords": ["Chicken Supply Manager", "Poultry Inventory Software", "Android Ledger App", "Full Stack Supply Chain App"]
+    "screenshots": [
+      "/poster-chicken-supply.jpg"
+    ],
+    "keywords": [
+      "Chicken Supply Manager",
+      "Poultry Inventory Software",
+      "Android Ledger App",
+      "Full Stack Supply Chain App"
+    ]
   },
   {
     "slug": "digital-khata",
@@ -120,8 +169,13 @@
     "image": "/poster-digital-khata.jpg",
     "shortDescription": "Digital ledger app helping small store owners record credit sales (Udhar), customer dues, and daily cash transactions.",
     "fullDescription": "Digital Khata is a financial tracking system tailored for small businesses. It replaces traditional paper ledger notebooks with a secure mobile and web app to track customer credits, send payment reminders, and record daily transactions.",
-    "tags": ["Java", "Android", "React", "Firebase", "Tailwind CSS"],
-    "githubUrl": "https://github.com/hamzafazal/digital-khata",
+    "tags": [
+      "Java",
+      "Android",
+      "React",
+      "Firebase",
+      "Tailwind CSS"
+    ],
     "problem": "Small retail merchants lose revenue due to forgotten customer debts and misplaced paper ledger books.",
     "solution": "Developed an effortless digital ledger with automated SMS/WhatsApp debt reminders and daily cash summary reports.",
     "features": [
@@ -133,8 +187,15 @@
     "architecture": "Android App & React Dashboard synced via Firebase Cloud Database.",
     "challenges": "Designing an ultra-simple interface accessible for merchants with zero technical background.",
     "learnings": "Strengthened understanding of business logic, financial reporting, and cross-platform sync.",
-    "screenshots": ["/poster-digital-khata.jpg"],
-    "keywords": ["Digital Khata App", "Shop ManagerUdhar Book App", "Android Retail Ledger", "Pakistan Digital Ledger"]
+    "screenshots": [
+      "/poster-digital-khata.jpg"
+    ],
+    "keywords": [
+      "Digital Khata App",
+      "Shop ManagerUdhar Book App",
+      "Android Retail Ledger",
+      "Pakistan Digital Ledger"
+    ]
   },
   {
     "slug": "yogaflow",
@@ -145,8 +206,13 @@
     "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop",
     "shortDescription": "Mindfulness and workout app providing guided yoga poses, exercise timers, and daily streak tracking.",
     "fullDescription": "YogaFlow is a fitness companion mobile app designed to help users establish consistent yoga habits. It features step-by-step pose guides, customizable workout timers, and habit streak tracking.",
-    "tags": ["Java", "Android Studio", "XML", "Room DB", "Custom Views"],
-    "githubUrl": "https://github.com/hamzafazal/yogaflow-app",
+    "tags": [
+      "Java",
+      "Android Studio",
+      "XML",
+      "Room DB",
+      "Custom Views"
+    ],
     "problem": "Beginners find yoga routines intimidating without structured pose guides and timer cues.",
     "solution": "Built a clean mobile app featuring visual pose tutorials, audio cues, and daily streak tracking.",
     "features": [
@@ -158,8 +224,15 @@
     "architecture": "MVVM architecture with Custom Timer Handlers and Local Storage.",
     "challenges": "Creating fluid, non-jarring timer countdown transitions.",
     "learnings": "Improved expertise in Android animation frameworks and custom layout components.",
-    "screenshots": ["https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop"],
-    "keywords": ["YogaFlow App", "Android Fitness App", "Java Workout Timer App", "Yoga Routine Android"]
+    "screenshots": [
+      "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop"
+    ],
+    "keywords": [
+      "YogaFlow App",
+      "Android Fitness App",
+      "Java Workout Timer App",
+      "Yoga Routine Android"
+    ]
   },
   {
     "slug": "portfolio-website",
@@ -170,8 +243,13 @@
     "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
     "shortDescription": "Apple-level minimalist portfolio website showcasing software projects, skills, services, and developer blog.",
     "fullDescription": "Official personal portfolio of Muhammad Hamza Fazal, built using Next.js App Router, TypeScript, and Tailwind CSS. Features full multi-page navigation, responsive layout, dark/light theme toggle, SEO optimizations, and dynamic case studies.",
-    "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-    "githubUrl": "https://github.com/hamzafazal/portfolio-website",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel"
+    ],
     "liveUrl": "https://hamzafazal.deesu.org",
     "problem": "Generic template portfolios fail to convey true technical skills, project depth, and digital marketing capabilities.",
     "solution": "Designed a custom, ultra-clean web experience with Apple/Vercel style minimalism, fast page loads, and rich case studies.",
@@ -184,8 +262,15 @@
     "architecture": "Next.js App Router, Static Site Generation (SSG), TypeScript, Tailwind CSS.",
     "challenges": "Achieving pristine typography balance and flawless responsiveness across mobile and desktop viewports.",
     "learnings": "Mastered advanced Next.js App Router patterns, Tailwind CSS v4 variables, and SEO optimization.",
-    "screenshots": ["https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop"],
-    "keywords": ["Hamza Fazal Portfolio", "Next.js Developer Portfolio", "SEO Developer Website", "Android Web Developer Pakistan"]
+    "screenshots": [
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop"
+    ],
+    "keywords": [
+      "Hamza Fazal Portfolio",
+      "Next.js Developer Portfolio",
+      "SEO Developer Website",
+      "Android Web Developer Pakistan"
+    ]
   },
   {
     "slug": "cvforge",
@@ -193,10 +278,13 @@
     "subtitle": "Android Resume & PDF Builder App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop",
+    "image": "https://play-lh.googleusercontent.com/ydB8qQgNe631v069SkzuoXBS-DdlQPy7G8GBNgTlEVjikBM7WVhud-SDEqqL1qfc4gOEZByDFmQhuij2_RxYHyg=w960-h540-rw",
     "shortDescription": "Android application published on Play Store for building and generating resumes and CVs as PDF documents directly on a mobile device.",
     "fullDescription": "CVForge is a native Android app for creating professional resumes and CVs and exporting them as PDF files, published under the Deesu Training & Education Network developer account on Google Play.",
-    "tags": ["Java", "Android Studio"],
+    "tags": [
+      "Java",
+      "Android Studio"
+    ],
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hhhdeveloper.swiftpdf",
     "problem": "Job seekers on mobile often lack a fast, native way to put together a clean, exportable resume without a desktop app.",
     "solution": "Built a native Android resume builder that generates a shareable PDF directly on-device.",
@@ -208,8 +296,17 @@
     "architecture": "Native Android application.",
     "challenges": "Producing clean, correctly formatted PDF output natively on Android.",
     "learnings": "Hands-on experience with on-device PDF generation for Android.",
-    "screenshots": ["https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop"],
-    "keywords": ["CVForge App", "Android Resume Builder", "PDF Maker Android App"]
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/ydB8qQgNe631v069SkzuoXBS-DdlQPy7G8GBNgTlEVjikBM7WVhud-SDEqqL1qfc4gOEZByDFmQhuij2_RxYHyg=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/tNGrN76p96FDKoqw8pXQEtF9hdgfxWud9xRGRO3lXVHVwfM0OBmkx4LPGXHtcYzilEMA3j_V2dro28hbhgkSCg=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/TzTJNG47ovRgpinCa_Z09wWrKO9m-HUtD10MH6iubySgFXcCw1_rRBuAz2OSnyaBmuqh3pao2rAYdQJSS0ArYw=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/5tfK1Zd3bRmm713o1w7VFMblxMZyH9a_4oiKIM09PEUu5MjZQJUrSp0ChzmNHU0g0hrNmpCPWVTiyrgWQFSwGWA=w960-h540-rw"
+    ],
+    "keywords": [
+      "CVForge App",
+      "Android Resume Builder",
+      "PDF Maker Android App"
+    ]
   },
   {
     "slug": "english-grammar-gamified",
@@ -217,10 +314,13 @@
     "subtitle": "Gamified English Grammar Practice App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop",
+    "image": "https://play-lh.googleusercontent.com/cgXldJ0u8FefAvP5BiSEoumbflGHTZC6NznWLG5BoqZ6ZlkK2GOd8fN3DukNs6AMdZZrYZZqHPYbfKd5xuW8BQ=w960-h540-rw",
     "shortDescription": "Android application published on Play Store offering gamified English grammar lessons and practice tests.",
     "fullDescription": "Learn English Grammar & Tests is a native Android learning app that turns English grammar practice into gamified lessons and quizzes, published under the Deesu Training & Education Network developer account on Google Play.",
-    "tags": ["Java", "Android Studio"],
+    "tags": [
+      "Java",
+      "Android Studio"
+    ],
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.dten.englishgrammargamified",
     "problem": "Traditional grammar study material is often dry and disengaging for learners practicing on mobile.",
     "solution": "Built a gamified quiz-based Android app to make English grammar practice more engaging.",
@@ -232,8 +332,17 @@
     "architecture": "Native Android application.",
     "challenges": "Structuring grammar content into an engaging, gamified quiz flow.",
     "learnings": "Experience designing gamified educational content for Android.",
-    "screenshots": ["https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"],
-    "keywords": ["Learn English Grammar App", "Android Grammar Test App", "Gamified English Learning"]
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/cgXldJ0u8FefAvP5BiSEoumbflGHTZC6NznWLG5BoqZ6ZlkK2GOd8fN3DukNs6AMdZZrYZZqHPYbfKd5xuW8BQ=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/649Zop5wctdyIMGtjYEpX-AJCSHJLwt_PisQ3PNJc7bYkk828bsDvB6HDiqk7ZofTjhyM0c031eUn0sp421lEFE=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/x012VZYd57Otli6lmMTjssfOkrY4b8se8o1ZC0Mh22yR8kEohenO_i-mxdJYIy0bLEXFwr5VrJXDPGpcuEIHqQ=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/_2_qhx31R6_nCXRSQjp40jIm35D78-Gu4uoRZBYit10pLERxHyaI4RIbUkq-AZ5VgI6VH0mqBZIYRKs99KjzOHk=w960-h540-rw"
+    ],
+    "keywords": [
+      "Learn English Grammar App",
+      "Android Grammar Test App",
+      "Gamified English Learning"
+    ]
   },
   {
     "slug": "interactive-math-learn",
@@ -241,10 +350,13 @@
     "subtitle": "Gamified Math Practice & Testing App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&auto=format&fit=crop",
+    "image": "https://play-lh.googleusercontent.com/dAyvIlBUlkOlqOaIR6YetBv1KMJLB5lm88iGawxwtJNNYry5N5mbG_hbjO8PX1kA37dC07-WWDEo5uH8WKxvREI=w960-h540-rw",
     "shortDescription": "Android application published on Play Store offering interactive, gamified math practice and testing.",
     "fullDescription": "Interactive Math Learn & Test is a native Android learning app for practicing math through interactive, gamified exercises and tests, published under the Deesu Training & Education Network developer account on Google Play.",
-    "tags": ["Java", "Android Studio"],
+    "tags": [
+      "Java",
+      "Android Studio"
+    ],
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.dten.mathgamified",
     "problem": "Students practicing math on mobile often need a more interactive alternative to static worksheets.",
     "solution": "Built a gamified, interactive Android app for math practice and self-testing.",
@@ -256,7 +368,16 @@
     "architecture": "Native Android application.",
     "challenges": "Designing interactive math exercises that stay engaging across difficulty levels.",
     "learnings": "Experience building gamified, interactive learning flows for Android.",
-    "screenshots": ["https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&auto=format&fit=crop"],
-    "keywords": ["Interactive Math App", "Android Math Test App", "Gamified Math Learning"]
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/dAyvIlBUlkOlqOaIR6YetBv1KMJLB5lm88iGawxwtJNNYry5N5mbG_hbjO8PX1kA37dC07-WWDEo5uH8WKxvREI=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/e_8mrS4hUEAnWbNf_1jF87WOJUoZQNm_8yCwGxIdAT8D1eGSr2ey0F3IwJVvL1goBJxW5qF3WTUDsYrc_kiyOq4=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/FSDe5u-Nk7QLkL2a5A-XnPAfTq9j8aveNDL8IDSa37Wd4obU0bripU-Bwx9CxE2obhGO3xkrA2YIZn1njHwQ=w960-h540-rw",
+      "https://play-lh.googleusercontent.com/eu47wq9tbrR3_JaIsbdPC8zvdbtE8LVXJAUWu6dVSkbFOpQ1bk98f88pfOiCnBkI9tekJtroUaHdYWE8ltp9qII=w960-h540-rw"
+    ],
+    "keywords": [
+      "Interactive Math App",
+      "Android Math Test App",
+      "Gamified Math Learning"
+    ]
   }
 ]

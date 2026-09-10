@@ -39,8 +39,7 @@ export function ProjectForm({ initial }: { initial?: Project }) {
       <TextAreaField label="Short Description" name="shortDescription" defaultValue={initial?.shortDescription} rows={2} required />
       <TextAreaField label="Full Description" name="fullDescription" defaultValue={initial?.fullDescription} rows={3} required />
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-        <Field label="GitHub URL" name="githubUrl" defaultValue={initial?.githubUrl} placeholder="https://github.com/..." />
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Field label="Live URL" name="liveUrl" defaultValue={initial?.liveUrl} placeholder="https://..." />
         <Field label="Play Store URL" name="playStoreUrl" defaultValue={initial?.playStoreUrl} placeholder="https://play.google.com/..." />
       </div>

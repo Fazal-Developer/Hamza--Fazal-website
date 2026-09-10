@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PROJECTS, PERSONAL_INFO } from '@/lib/data'
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck, Cpu, AlertTriangle, Lightbulb, Image as ImageIcon, PlayCircle } from 'lucide-react'
-import { GithubIcon } from '@/components/icons'
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -122,17 +121,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             >
               <PlayCircle className="h-4 w-4" />
               <span>Get it on Play Store</span>
-            </a>
-          )}
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-xs font-bold text-background shadow-md hover:scale-105 transition-all"
-            >
-              <GithubIcon className="h-4 w-4" />
-              <span>View GitHub Code</span>
             </a>
           )}
           {project.liveUrl && (

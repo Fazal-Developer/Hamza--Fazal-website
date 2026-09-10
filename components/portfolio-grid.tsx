@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
 import { PROJECTS } from '@/lib/data'
 import { ArrowUpRight, PlayCircle } from 'lucide-react'
-import { GithubIcon } from '@/components/icons'
 import { TiltCard } from '@/components/tilt-card'
 
 const CATEGORIES = ['All', 'Android', 'Web', 'Full-Stack'] as const
@@ -96,32 +95,18 @@ export function PortfolioGrid() {
                     <ArrowUpRight className="h-4 w-4" />
                   </Link>
 
-                  <div className="flex items-center gap-4">
-                    {project.playStoreUrl && (
-                      <a
-                        href={project.playStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-cursor-hover
-                        className="flex items-center gap-1 font-mono text-xs font-bold text-emerald-500 hover:text-emerald-400"
-                      >
-                        <PlayCircle className="h-3.5 w-3.5" />
-                        <span>Play Store</span>
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-cursor-hover
-                        className="flex items-center gap-1 font-mono text-xs text-muted-foreground hover:text-foreground"
-                      >
-                        <GithubIcon className="h-3.5 w-3.5" />
-                        <span>Repository</span>
-                      </a>
-                    )}
-                  </div>
+                  {project.playStoreUrl && (
+                    <a
+                      href={project.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cursor-hover
+                      className="flex items-center gap-1 font-mono text-xs font-bold text-emerald-500 hover:text-emerald-400"
+                    >
+                      <PlayCircle className="h-3.5 w-3.5" />
+                      <span>Play Store</span>
+                    </a>
+                  )}
                 </div>
               </TiltCard>
             </motion.div>
