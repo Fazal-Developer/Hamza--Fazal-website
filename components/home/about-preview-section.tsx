@@ -8,6 +8,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { PERSONAL_INFO } from '@/lib/data'
 import { Reveal } from '@/components/reveal'
 import { TiltCard } from '@/components/tilt-card'
+import { AnimatedHeading } from '@/components/animated-heading'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -74,9 +75,9 @@ export function AboutPreviewSection() {
 
         <Reveal delay={0.1} className="space-y-5 lg:col-span-7">
           <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">About Me</p>
-          <h2 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+          <AnimatedHeading className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
             More than just code.
-          </h2>
+          </AnimatedHeading>
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             I&apos;m a Software Engineering student who builds real, published products, not just prototypes.
             Native Android apps with Java and MVVM, fast Next.js web platforms, and the SEO work that helps

@@ -4,12 +4,14 @@ import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provi
 import { PageTransition } from '@/components/providers/page-transition'
 import { CustomCursor } from '@/components/cursor/custom-cursor'
 import { LoadingScreen } from '@/components/loading-screen'
+import { ScrollProgressBar } from '@/components/scroll-progress-bar'
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <SmoothScrollProvider>
       <LoadingScreen />
       <CustomCursor />
+      <ScrollProgressBar />
       <Navbar />
       <main className="flex-1">
         <PageTransition>{children}</PageTransition>

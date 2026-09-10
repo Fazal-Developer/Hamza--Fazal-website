@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { SKILL_CATEGORIES } from '@/lib/data'
-import { Reveal, RevealStagger, RevealItem } from '@/components/reveal'
+import { Reveal } from '@/components/reveal'
+import { AnimatedHeading } from '@/components/animated-heading'
+import { ScrollStagger } from '@/components/scroll-stagger'
 
 const FEATURED_SKILLS = [
   'Java',
@@ -26,22 +28,25 @@ export function SkillsPreviewSection() {
 
   return (
     <section className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-      <Reveal className="text-center">
-        <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">Tech Stack</p>
-        <h2 className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+      <div className="text-center">
+        <Reveal>
+          <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">Tech Stack</p>
+        </Reveal>
+        <AnimatedHeading className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
           Tools I build with daily.
-        </h2>
-      </Reveal>
+        </AnimatedHeading>
+      </div>
 
-      <RevealStagger className="mt-10 flex flex-wrap justify-center gap-3">
+      <ScrollStagger className="mt-10 flex flex-wrap justify-center gap-3" stagger={0.04}>
         {featured.map((skill) => (
-          <RevealItem key={skill.name}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground">
-              {skill.name}
-            </span>
-          </RevealItem>
+          <span
+            key={skill.name}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground"
+          >
+            {skill.name}
+          </span>
         ))}
-      </RevealStagger>
+      </ScrollStagger>
 
       <div className="mt-10 flex justify-center">
         <Link

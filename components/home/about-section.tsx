@@ -2,6 +2,8 @@ import { CheckCircle2, MapPin, GraduationCap } from 'lucide-react'
 import { PERSONAL_INFO } from '@/lib/data'
 import { Reveal } from '@/components/reveal'
 import { TiltCard } from '@/components/tilt-card'
+import { AnimatedHeading } from '@/components/animated-heading'
+import { ScrollStagger } from '@/components/scroll-stagger'
 
 const CAPABILITIES = [
   { label: 'Native Android Architecture', detail: 'Java, MVVM, Room DB' },
@@ -13,11 +15,9 @@ const CAPABILITIES = [
 export function AboutSection() {
   return (
     <section id="about" className="relative mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
-      <Reveal>
-        <h2 className="max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          Building digital experiences with code.
-        </h2>
-      </Reveal>
+      <AnimatedHeading className="max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl md:text-5xl">
+        Building digital experiences with code.
+      </AnimatedHeading>
 
       <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-6">
         {/* Portrait */}
@@ -78,17 +78,15 @@ export function AboutSection() {
       </div>
 
       {/* Capabilities strip */}
-      <div className="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {CAPABILITIES.map((cap, i) => (
-          <Reveal key={cap.label} delay={0.05 * i}>
-            <TiltCard maxTilt={5} className="group h-full rounded-2xl border border-border bg-card p-5">
-              <CheckCircle2 className="h-4 w-4 text-accent" />
-              <p className="mt-3 text-xs font-bold text-foreground">{cap.label}</p>
-              <p className="mt-1 text-[11px] text-muted-foreground">{cap.detail}</p>
-            </TiltCard>
-          </Reveal>
+      <ScrollStagger className="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {CAPABILITIES.map((cap) => (
+          <TiltCard key={cap.label} maxTilt={5} className="group h-full rounded-2xl border border-border bg-card p-5">
+            <CheckCircle2 className="h-4 w-4 text-accent" />
+            <p className="mt-3 text-xs font-bold text-foreground">{cap.label}</p>
+            <p className="mt-1 text-[11px] text-muted-foreground">{cap.detail}</p>
+          </TiltCard>
         ))}
-      </div>
+      </ScrollStagger>
     </section>
   )
 }

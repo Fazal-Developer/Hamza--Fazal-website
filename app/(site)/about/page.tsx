@@ -7,6 +7,9 @@ import { TiltCard } from '@/components/tilt-card'
 import { AboutSection } from '@/components/home/about-section'
 import { JourneySection } from '@/components/home/journey-section'
 import { SkillsSection } from '@/components/home/skills-section'
+import { AnimatedHeading } from '@/components/animated-heading'
+import { ScrollStagger } from '@/components/scroll-stagger'
+import { ScaleReveal } from '@/components/scale-reveal'
 
 export const metadata: Metadata = {
   title: 'About Muhammad Hamza Fazal',
@@ -92,24 +95,22 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <Reveal>
               <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">What I Do</p>
-              <h2 className="mt-2 max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-                Three disciplines, one product mindset.
-              </h2>
             </Reveal>
+            <AnimatedHeading className="mt-2 max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+              Three disciplines, one product mindset.
+            </AnimatedHeading>
 
-            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-              {WHAT_I_DO.map((item, i) => (
-                <Reveal key={item.title} delay={0.08 * i}>
-                  <TiltCard maxTilt={4} className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-card p-7">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-accent">
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-                  </TiltCard>
-                </Reveal>
+            <ScrollStagger className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+              {WHAT_I_DO.map((item) => (
+                <TiltCard key={item.title} maxTilt={4} className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-card p-7">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-accent">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                </TiltCard>
               ))}
-            </div>
+            </ScrollStagger>
           </div>
         </section>
 
@@ -117,9 +118,11 @@ export default function AboutPage() {
         <section className="mx-auto max-w-4xl px-5 py-24 text-center md:px-8 md:py-32">
           <Reveal>
             <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">My Approach</p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-              Build it clean. Ship it real. Make it findable.
-            </h2>
+          </Reveal>
+          <AnimatedHeading className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+            Build it clean. Ship it real. Make it findable.
+          </AnimatedHeading>
+          <Reveal>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               I start with the actual problem, not a feature list. On Android that means clean MVVM
               architecture and offline-first data with Room. On the web it means fast, responsive interfaces
@@ -142,10 +145,10 @@ export default function AboutPage() {
               <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">
                 Why Work With Me
               </p>
-              <h2 className="mt-2 max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-                What you actually get.
-              </h2>
             </Reveal>
+            <AnimatedHeading className="mt-2 max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+              What you actually get.
+            </AnimatedHeading>
 
             <RevealStagger className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
               {WHY_WORK_WITH_ME.map((item) => (
@@ -167,11 +170,11 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-          <Reveal>
+          <ScaleReveal>
             <div className="rounded-3xl border border-border bg-card p-10 text-center shadow-xl md:p-14">
-              <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+              <AnimatedHeading className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
                 Want to collaborate on a project?
-              </h2>
+              </AnimatedHeading>
               <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
                 I&apos;m always excited to work on new Android applications, modern websites, or digital
                 marketing growth projects.
@@ -185,7 +188,7 @@ export default function AboutPage() {
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
-          </Reveal>
+          </ScaleReveal>
         </section>
       </div>
     </>

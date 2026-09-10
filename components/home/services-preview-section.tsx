@@ -3,6 +3,8 @@ import { Smartphone, Globe, Flame, TrendingUp, ArrowUpRight } from 'lucide-react
 import { SERVICES } from '@/lib/data'
 import { Reveal } from '@/components/reveal'
 import { TiltCard } from '@/components/tilt-card'
+import { AnimatedHeading } from '@/components/animated-heading'
+import { ScrollStagger } from '@/components/scroll-stagger'
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   Smartphone,
@@ -24,9 +26,9 @@ export function ServicesPreviewSection() {
         <Reveal className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="font-mono text-[11px] font-bold uppercase tracking-widest text-accent">What I Do</p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+            <AnimatedHeading className="mt-2 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
               Services built around real skills.
-            </h2>
+            </AnimatedHeading>
           </div>
           <Link
             href="/services"
@@ -38,22 +40,20 @@ export function ServicesPreviewSection() {
           </Link>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((service, i) => {
+        <ScrollStagger className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {featured.map((service) => {
             const Icon = ICONS[service.iconName] ?? Smartphone
             return (
-              <Reveal key={service.id} delay={0.05 * i}>
-                <TiltCard maxTilt={4} className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-card p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-accent">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-base font-bold text-foreground">{service.title}</h3>
-                  <p className="text-xs leading-relaxed text-muted-foreground">{service.description}</p>
-                </TiltCard>
-              </Reveal>
+              <TiltCard key={service.id} maxTilt={4} className="flex h-full flex-col gap-3 rounded-3xl border border-border bg-card p-6">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-accent">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-bold text-foreground">{service.title}</h3>
+                <p className="text-xs leading-relaxed text-muted-foreground">{service.description}</p>
+              </TiltCard>
             )
           })}
-        </div>
+        </ScrollStagger>
 
         <div className="mt-8 flex justify-center sm:hidden">
           <Link
