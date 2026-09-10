@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PROJECTS, PERSONAL_INFO } from '@/lib/data'
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck, Cpu, AlertTriangle, Lightbulb, Image as ImageIcon, PlayCircle } from 'lucide-react'
+import { ScreenshotSlideshow } from '@/components/screenshot-slideshow'
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -229,12 +230,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <ImageIcon className="h-4 w-4" />
             <span>Project Visual Gallery</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.screenshots.map((img, idx) => (
-              <div key={idx} className="overflow-hidden rounded-2xl border border-border bg-card shadow-md">
-                <img src={img} alt={`${project.title} App Screenshot ${idx + 1} — Muhammad Hamza Fazal`} className="w-full object-cover" />
-              </div>
-            ))}
+          <div className="mx-auto max-w-2xl">
+            <ScreenshotSlideshow images={project.screenshots} alt={`${project.title} App Screenshot`} />
           </div>
         </div>
       )}
