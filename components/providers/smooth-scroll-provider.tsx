@@ -17,9 +17,9 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     if (prefersReducedMotion) return
 
     const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.08,
       smoothWheel: true,
+      syncTouch: false,
     })
     lenisRef.current = lenis
     document.documentElement.classList.add('lenis')
@@ -32,7 +32,13 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     gsap.ticker.add(tickerCallback)
     gsap.ticker.lagSmoothing(0)
 
+    const handleResize = () => {
+      ScrollTrigger.refresh()
+    }
+    window.addEventListener('resize', handleResize)
+
     return () => {
+      window.removeEventListener('resize', handleResize)
       gsap.ticker.remove(tickerCallback)
       lenis.destroy()
       lenisRef.current = null

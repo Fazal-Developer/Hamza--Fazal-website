@@ -3,6 +3,7 @@ import { PROJECTS, PERSONAL_INFO } from '@/lib/data'
 import { Sparkles } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { PortfolioGrid } from '@/components/portfolio-grid'
+import { SectionReveal } from '@/components/antigravity'
 
 export const metadata: Metadata = {
   title: 'Portfolio — Muhammad Hamza Fazal',
@@ -53,31 +54,33 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCatalog) }}
-      />
+    <SectionReveal>
+      <div className="mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCatalog) }}
+        />
 
-      <Reveal className="max-w-2xl space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 font-mono text-xs font-bold text-accent">
-          <Sparkles className="h-3.5 w-3.5" />
-          <span>Portfolio</span>
-        </div>
-        <h1 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl">
-          Complete project showcase.
-        </h1>
-        <p className="text-lg leading-relaxed text-muted-foreground">
-          Real-world Android applications, web platforms, and full-stack systems, designed and built with
-          clean architecture.
-        </p>
-      </Reveal>
+        <Reveal className="max-w-2xl space-y-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 font-mono text-xs font-bold text-accent">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Portfolio</span>
+          </div>
+          <h1 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            Complete project showcase.
+          </h1>
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            Real-world Android applications, web platforms, and full-stack systems, designed and built with
+            clean architecture.
+          </p>
+        </Reveal>
 
-      <PortfolioGrid />
-    </div>
+        <PortfolioGrid />
+      </div>
+    </SectionReveal>
   )
 }
