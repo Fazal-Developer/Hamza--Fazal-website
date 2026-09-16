@@ -71,9 +71,10 @@ export async function POST(request: Request) {
       }
     }
 
-    // 3. FormSubmit forwarder (zero API-key needed, delivers directly to Gmail)
+    // 3. FormSubmit forwarder (using your assigned token hash)
     const siteUrl = PERSONAL_INFO.siteUrl || 'https://hamzafazal.deesu.org'
-    const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+    const formSubmitTarget = process.env.FORMSUBMIT_TOKEN || '2c7c29c1b5cf10dda1c1f9e0a984587d'
+    const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${formSubmitTarget}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
