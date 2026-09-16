@@ -75,43 +75,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     ],
   }
 
-  const jsonLdSoftware = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: project.title,
-    applicationCategory:
-      project.category === 'Android'
-        ? 'MobileApplication'
-        : 'WebApplication',
-    operatingSystem: project.category === 'Android' ? 'Android' : 'All',
-    description: project.shortDescription,
-    image: project.image,
-    author: {
-      '@type': 'Person',
-      name: 'Muhammad Hamza Fazal',
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
-  }
-
   return (
-    <div className="mx-auto max-w-5xl px-5 pt-32 pb-28 md:px-8 md:pt-40 md:pb-36 space-y-12">
+    <div className="mx-auto max-w-5xl px-5 pb-12 pt-28 md:px-8 md:pb-20 md:pt-36 space-y-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSoftware) }}
       />
 
       {/* Back Link */}
       <Link
         href="/projects"
-        className="inline-flex items-center gap-2 text-xs font-mono font-bold text-muted-foreground hover:text-foreground transition-colors"
+        className="inline-flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
         <span>Back to Projects Catalog</span>
@@ -133,11 +107,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </h1>
         <p className="text-xl font-bold text-muted-foreground">{project.subtitle}</p>
 
-        <div className="text-base leading-relaxed text-muted-foreground pt-2 whitespace-pre-line space-y-4">
+        <p className="text-base leading-relaxed text-muted-foreground pt-2">
           {project.fullDescription}
-        </div>
+        </p>
 
-        {/* Action Links */}
+        {/* Links */}
         <div className="flex flex-wrap items-center gap-4 pt-4">
           {project.playStoreUrl && (
             <a
@@ -176,11 +150,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      {/* Cover Image / Featured Graphic */}
+      {/* Cover Image */}
       <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
         <img
           src={project.image}
-          alt={`${project.title} Featured Banner — Muhammad Hamza Fazal`}
+          alt={`${project.title} Case Study Preview — Muhammad Hamza Fazal`}
           className="aspect-[16/9] w-full object-cover"
         />
       </div>
@@ -291,7 +265,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="space-y-6 border-t border-border pt-12">
           <div className="flex items-center gap-2 text-xs font-mono font-bold text-accent uppercase tracking-widest">
             <ImageIcon className="h-4 w-4" />
-            <span>Official Play Store Visual Gallery ({project.screenshots.length} Screenshots)</span>
+            <span>Project Visual Gallery</span>
           </div>
           <div className="mx-auto max-w-2xl">
             <ScreenshotSlideshow images={project.screenshots} alt={`${project.title} App Screenshot`} />
