@@ -15,25 +15,52 @@ export function ContactSection() {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [activationNotice, setActivationNotice] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
+    setActivationNotice(false)
 
-    if (!name || !email || !message) {
+    if (!name.trim() || !email.trim() || !message.trim()) {
       setError('Please fill in all required fields.')
       return
     }
 
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          subject: subject.trim(),
+          message: message.trim(),
+        }),
+      })
+
+      const data = await res.json().catch(() => ({}))
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to send message. Please try again.')
+      }
+
+      if (data.activationNeeded) {
+        setActivationNotice(true)
+      }
+
       setSubmitted(true)
       setName('')
       setEmail('')
       setSubject('')
       setMessage('')
-    }, 1000)
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong while sending your message.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -64,11 +91,20 @@ export function ContactSection() {
                   <CheckCircle2 className="h-5 w-5" />
                   <span>Message sent successfully</span>
                 </div>
-                <p className="text-xs leading-relaxed">
-                  Thanks for reaching out. I&apos;ll reply to your email as soon as possible.
-                </p>
+                {activationNotice ? (
+                  <p className="text-xs leading-relaxed text-foreground">
+                    Notice: An activation email has been sent to <strong>{PERSONAL_INFO.email}</strong>. Please check your Gmail (including spam folder) and click <strong>Activate Form</strong> to ensure future messages land directly in your inbox.
+                  </p>
+                ) : (
+                  <p className="text-xs leading-relaxed">
+                    Thanks for reaching out! Your message has been sent to {PERSONAL_INFO.email}. I&apos;ll reply to your email as soon as possible.
+                  </p>
+                )}
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => {
+                    setSubmitted(false)
+                    setActivationNotice(false)
+                  }}
                   data-cursor-hover
                   className="mt-2 rounded-full bg-foreground px-5 py-2 text-xs font-bold text-background"
                 >
@@ -78,9 +114,20 @@ export function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 {error && (
-                  <div className="flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-xs font-bold text-red-600 dark:text-red-400">
-                    <AlertCircle className="h-4 w-4 shrink-0" />
-                    <span>{error}</span>
+                  <div className="space-y-2 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-xs font-bold text-red-600 dark:text-red-400">
+                    <div className="flex items-center gap-2">
+                      <AlertCircle className="h-4 w-4 shrink-0" />
+                      <span>{error}</span>
+                    </div>
+                    <p className="text-[11px] font-normal text-muted-foreground">
+                      You can also email directly at{' '}
+                      <a
+                        href={`mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`}
+                        className="underline text-foreground"
+                      >
+                        {PERSONAL_INFO.email}
+                      </a>
+                    </p>
                   </div>
                 )}
 
