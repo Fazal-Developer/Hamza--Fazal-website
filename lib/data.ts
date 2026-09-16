@@ -18,6 +18,7 @@ export interface Project {
   githubUrl?: string
   liveUrl?: string
   playStoreUrl?: string
+  privacyPolicyUrl?: string
   problem: string
   solution: string
   features: string[]

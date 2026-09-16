@@ -4,6 +4,9 @@ import { PERSONAL_INFO } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Terms of Service | Hamza Fazal',
   description: 'Terms of service for the official personal brand portfolio of Muhammad Hamza Fazal.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/terms`,
+  },
 }
 
 export default function TermsPage() {

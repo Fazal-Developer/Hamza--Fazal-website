@@ -1,13 +1,13 @@
 [
   {
     "slug": "traffic-quiz",
-    "title": "Traffic Sign Test & Driving Quiz App",
+    "title": "Traffic Quiz Test : Road Signs",
     "subtitle": "Official Driving Rules & Road Signs Android App",
     "category": "Android",
     "status": "Completed",
-    "image": "/poster-traffic-quiz.jpg",
-    "shortDescription": "Comprehensive Android application published on Play Store designed to help driving license applicants prepare for road sign & traffic law exams.",
-    "fullDescription": "Traffic Quiz App is a native Android application built with Java and XML. It provides interactive quizzes, road sign flashcards, timed mock tests, and instant score feedback to help users prepare for official driving license exams.",
+    "image": "https://play-lh.googleusercontent.com/qizCqtX2xQNqK1ejUVEYY3T9XVB6J-E-jvbo8UNh_mRwHX7JPS_HMcZ8cXg8NkXCxhVHjLU631Z0JgnqgBZTqw=s0-br30",
+    "shortDescription": "2Do lets you take a completely different approach to managing your tasks. It&#39;s extremely simple to use, and makes available desktop-class, power-user features to meet those daily goals.",
+    "fullDescription": "2Do lets you take a completely different approach to managing your tasks. It&#39;s extremely simple to use, and makes available desktop-class, power-user features to meet those daily goals. There is no wrong way of using 2Do, and unlike other to-do apps, it won&#39;t force you into following a particular task management methodology.\n\nFREE &amp; OFFLINE\n2Do is a non-expiring FREE, full-featured, offline to-do app with all its functions enabled, with the exception of Cloud Sync, Backups Alert notifications and Markdown notes, which are part of a 14-day trial. You can unlock these permanently at any time with a one-time only in-app purchase. After the trial period, all features on display will continue to function fully.\n\nAWARDS\nâ¢ App of the Year 2015 - Macstories\nâ¢ Mac App Store âBest of 2013â - Apple\nâ¢ Gold Medal for &quot;Best app for forgetful people&quot; - Gizmodo\nâ¢ Cult Of Mac - 5/5\n\nSIMPLE TASKS, CHECKLISTS &amp; PROJECTS\nâ¢ Create simple tasks, or checklists and projects with sub-tasks. Tasks can have rich notes with markdown, attachments and multiple alarms.\nâ¢ Recurring tasks, due dates, start dates and more\nâ¢ Set any task to repeat using a flexible set of options.\n\nLIST GROUPS, LISTS, INBOX &amp; SMART LISTS\nâ¢ In addition to built-in Focus lists that allow you to conveniently view upcoming, starred or scheduled tasks, you can create multiple todo lists to manage and organize different aspects of your life: work, home, leisure, sports and so on.\nâ¢ Built-in support for GTD (Getting things done) Inbox\nâ¢ Create and manage shopping lists, work tasks, recurring bills, travel plans, anniversaries, someday stuff or anything else in individually colored lists. The only organizer you&#39;ll need.\nâ¢ Lists can be individually excluded to appear from the All focus list - perfect for stuff you&#39;ll get to one day but don&#39;t want it appearing alongside important stuff\nâ¢ Smart lists let you harness the true potential of 2Do using a number of search options, filters and search pre-sets. Using Smart Lists, you can create custom views of your tasks and use them to focus-in or find frequently managed tasks.\nâ¢ Filter on list groups or individual todo lists\nâ¢ Use as an events or a party planner, or an effective birthday reminder\n\nREMINDERS [PRO]\nâ¢ Assign multiple alerts to a task to remind you at different dates and times\nâ¢ Create reminders for recurring todos\n\nMARKDOWN SUPPORT [PRO]\nâ¢ Give richness to your notes by adding markdown tags and previewing them with ease\n\nSYNC [PRO]\nâ¢ Stay in sync using CalDAV (iCloud / Fruux / Fastmail etc), Dropbox or Toodledo. 2Do works across Android, iOS and Macs\n\nPASSWORD PROTECTION\nâ¢ Protect individual todo lists or lock out the whole app\nâ¢ Perfect for storing gift ideas\n\nSORTING &amp; FOCUS\nâ¢ Take control of how you sort your lists, or use the Focus filter to quickly filter on stuff you need to focus on\n\nBATCH EDITING\nâ¢ Batch defer, tag, star, marking tasks done and more\n\nREIMAGINED TASK EDITOR &amp; QUICK ADD\nâ¢ With focus on switching between editors effortlessly using a single tap only\n\nTAGS\nâ¢ Manage tags from a dedicated Tags Panel\nâ¢ Organize your tags within groups\nâ¢ Leverage the powerful integration of Tags &amp; Smart Lists to filter on frequently managed tasks.  â¢ Find Used vs. Unused tags\n\nLOCATIONS\nâ¢ Attach locations to tasks and get reminders when near these locations\n\nYOUR TASKS UNLIMITED\nâ¢ Set a Start Date to hide tasks from a list before they&#39;re relevant and add Duration to put an estimate on the amount of time youâll be spending on your task\nâ¢ Add an action a todo to call, write an email or message, navigate or trigger a URL Scheme right from 2Do\nâ¢ Attach an image or a voice memo to your tasks\n\nBACKUPS [PRO]\nâ¢ Create and restore backups at any time\n\nFollow us:\nTwitter.com/2DoApp\nYoutube.com/user/The2DoApp",
     "tags": [
       "Java",
       "Android Studio",
@@ -30,28 +30,32 @@
     "challenges": "Ensuring fast quiz rendering without lag while handling hundreds of high-resolution vector road sign graphics.",
     "learnings": "Mastered Room Database migrations, LiveData observer patterns, and efficient image caching in Android Studio.",
     "screenshots": [
-      "/poster-traffic-quiz.jpg",
-      "https://play-lh.googleusercontent.com/oHISKhzudYx1rWpQK0wBKE-Mf_836dmmpzyYaBnsBeCMjEzqP5a9F3AcYX-n3DRcPf7bSey8HRoa-ygzqHku=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/eEAHSgU0EH2skb4BSmcnZL-JTlQb2f9HKuAJ3A6ttHQBjLRysL70dtkXwHlVAv9jOsxLzh8TDx6-qnkS73OMfA=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/gAKoW8K2jEO-DdzFMpEsL-QuznIrgkiibjSmDtMekeSWOwzldweyVz2A6RnwM4Pi8d8kfPytnWJh7AOmBd2_lg=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/n8giJFQqJL8UWqZ98GmJTXyP_3CUm0YhKaaKqCclngWz-68yfWn1WI-SolU17Op6wBgGoxdOJ_uyMVvD6lre-A=w960-h540-rw"
+      "https://play-lh.googleusercontent.com/oHISKhzudYx1rWpQK0wBKE-Mf_836dmmpzyYaBnsBeCMjEzqP5a9F3AcYX-n3DRcPf7bSey8HRoa-ygzqHku=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/eEAHSgU0EH2skb4BSmcnZL-JTlQb2f9HKuAJ3A6ttHQBjLRysL70dtkXwHlVAv9jOsxLzh8TDx6-qnkS73OMfA=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/gAKoW8K2jEO-DdzFMpEsL-QuznIrgkiibjSmDtMekeSWOwzldweyVz2A6RnwM4Pi8d8kfPytnWJh7AOmBd2_lg=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/n8giJFQqJL8UWqZ98GmJTXyP_3CUm0YhKaaKqCclngWz-68yfWn1WI-SolU17Op6wBgGoxdOJ_uyMVvD6lre-A=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/cOytmmfD9miAcBudod91HmEV2BaYNrxa1A_ZdPtiLeIYL28-YxLDFy2E5gxiZaCzKkjog7aOH0wuclRNuWN_AA=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/j0zDTE8b4UaNyj8zCl1b6lCtM2XmMMcGODufowG6SYKcZGcaJPi3QvlvZeGhwqoT8viQ-495ZTcAdElSyyXVAw=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/-AuzvowGNQycl0jYFXoD9efBrWE6sCQrNecxrNkpLZZj12Mb1qQ5fJMkFUrvs6CGkqOj4kbWJP3LCEm3C4l0=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/ZprlACAaLqXhn_SzS8UZYwVNKhJVnPa6g3FWR2w4NRM2Pmzj9b85iz9PEBVlZwkC9Z1qbNDC6moyyqYuQlqxwQ=w1080-h1920-rw"
     ],
     "keywords": [
       "Traffic Quiz App",
       "Android Driving License App",
       "Java Traffic Sign Test",
       "Room DB Quiz App"
-    ]
+    ],
+    "privacyPolicyUrl": "https://deesu.org/privacy-policy-of-the-traffic-quiz-test/"
   },
   {
     "slug": "learning-hub",
-    "title": "Matric Guru (Learning Hub)",
+    "title": "Matric Guru: MCQ Test Prep",
     "subtitle": "9th & 10th Class Educational Resource & Notes App",
     "category": "Android",
     "status": "Completed",
-    "image": "/poster-matric-guru.jpg",
-    "shortDescription": "Matric Guru is a mobile learning portal allowing 9th & 10th class students to access subject lectures, course notes, and past paper tutorials.",
-    "fullDescription": "Matric Guru (Learning Hub) is a feature-rich Android app published for students. It centralizes 9th & 10th class educational notes, Mathematics, Physics, Chemistry, Biology PDF study guides, and video tutorials into an organized mobile interface with Firebase integration.",
+    "image": "https://play-lh.googleusercontent.com/97HD56bhb3WJl9zdvEGPVAnWCKuuLI30D0NvzLSiCMOT5KgXORNaXJULuV3yb11jNZsQpcNS32RI3yqxNLP6h0U=s0-br30",
+    "shortDescription": "ð Matric Guru â Your Complete MCQ Practice App for 9th &amp; 10th Class\n\nPreparing for your Matric exams? Matric Guru is a smart quiz and assessment app built for 9th and 10th class students to practice MCQs in English, Mathematics, and other key subjects through structured, exam-style tests.\n\nWith subject-wise quizzes and timed practice sessions, you can target your weak areas, build confidence, and track your progress â all before exam day.\n\nâ¨ WHY MATRIC GURU?\n- Subject-Wise Quizzes â Practice unit by unit or full chapters\n- Exam Simulation â Countdown timer for real exam-style practice\n- Performance History â Track your recent attempts with detailed results\n- Lightweight &amp; Fast â Smooth, quick-loading experience\n- Offline Practice â Keep solving quizzes after content loads\n- Cloud Sync â Securely save your results with Firebase\n\nð ENGLISH CLASS OVERVIEW\nTenses: Present, Past &amp; Future (Indefinite, Continuous, Perfect, Perfect Continuous) + Mixed Tenses\nParts of Speech: Noun, Pronoun, Adjective, Adverb, Preposition, Conjunction, Interjection, Articles, Determiners, Quantifiers, Punctuation\nActive &amp; Passive Voice\nDirect &amp; Indirect Speech (Affirmative, Interrogative, Imperative, Optative, Exclamatory)\n\nâ MATHEMATICS CLASS OVERVIEW\n- Number System â Natural, Whole, Integers, Rational, Irrational, Real Numbers\n- Arithmetic â HCF, LCM, BODMAS, Squares &amp; Cubes, Factors &amp; Multiples\n- Fractions &amp; Decimals â Operations &amp; Conversions\n- Percentages, Ratio &amp; Proportion â Profit/Loss, Discounts\n- Algebra â Equations, Factorization, Identities\n- Powers &amp; Roots â Square/Cube Roots, Exponents, Surds\n- Geometry &amp; Mensuration â Shapes, Area, Volume\n- Coordinate Geometry â Cartesian Plane, Distance &amp; Midpoint\n- Data Handling &amp; Statistics â Graphs, Mean, Mode, Median\n- Probability &amp; Logical Reasoning\n- Word Problems â Age, Speed/Time/Distance, Work Problems\n\nð SUBJECTS COVERED (9th &amp; 10th Class)\nEnglish â¢ Mathematics â¢ Physics â¢ Chemistry â¢ Biology â¢ Computer Science â¢ Pak Studies (English &amp; Urdu)\n\nWhether you&#39;re studying at home, school, or on the go, Matric Guru helps you practice smarter and score better. Download now and start your journey to exam success!\n\nð§ Feedback or suggestions? Email us at hhhdeveloper125@gmail.com.",
+    "fullDescription": "ð Matric Guru â Your Complete MCQ Practice App for 9th &amp; 10th Class\n\nPreparing for your Matric exams? Matric Guru is a smart quiz and assessment app built for 9th and 10th class students to practice MCQs in English, Mathematics, and other key subjects through structured, exam-style tests.\n\nWith subject-wise quizzes and timed practice sessions, you can target your weak areas, build confidence, and track your progress â all before exam day.\n\nâ¨ WHY MATRIC GURU?\n- Subject-Wise Quizzes â Practice unit by unit or full chapters\n- Exam Simulation â Countdown timer for real exam-style practice\n- Performance History â Track your recent attempts with detailed results\n- Lightweight &amp; Fast â Smooth, quick-loading experience\n- Offline Practice â Keep solving quizzes after content loads\n- Cloud Sync â Securely save your results with Firebase\n\nð ENGLISH CLASS OVERVIEW\nTenses: Present, Past &amp; Future (Indefinite, Continuous, Perfect, Perfect Continuous) + Mixed Tenses\nParts of Speech: Noun, Pronoun, Adjective, Adverb, Preposition, Conjunction, Interjection, Articles, Determiners, Quantifiers, Punctuation\nActive &amp; Passive Voice\nDirect &amp; Indirect Speech (Affirmative, Interrogative, Imperative, Optative, Exclamatory)\n\nâ MATHEMATICS CLASS OVERVIEW\n- Number System â Natural, Whole, Integers, Rational, Irrational, Real Numbers\n- Arithmetic â HCF, LCM, BODMAS, Squares &amp; Cubes, Factors &amp; Multiples\n- Fractions &amp; Decimals â Operations &amp; Conversions\n- Percentages, Ratio &amp; Proportion â Profit/Loss, Discounts\n- Algebra â Equations, Factorization, Identities\n- Powers &amp; Roots â Square/Cube Roots, Exponents, Surds\n- Geometry &amp; Mensuration â Shapes, Area, Volume\n- Coordinate Geometry â Cartesian Plane, Distance &amp; Midpoint\n- Data Handling &amp; Statistics â Graphs, Mean, Mode, Median\n- Probability &amp; Logical Reasoning\n- Word Problems â Age, Speed/Time/Distance, Work Problems\n\nð SUBJECTS COVERED (9th &amp; 10th Class)\nEnglish â¢ Mathematics â¢ Physics â¢ Chemistry â¢ Biology â¢ Computer Science â¢ Pak Studies (English &amp; Urdu)\n\nWhether you&#39;re studying at home, school, or on the go, Matric Guru helps you practice smarter and score better. Download now and start your journey to exam success!\n\nð§ Feedback or suggestions? Email us at hhhdeveloper125@gmail.com",
     "tags": [
       "Java",
       "Android Studio",
@@ -72,18 +76,22 @@
     "challenges": "Handling large PDF file downloads smoothly on low-bandwidth mobile networks.",
     "learnings": "Deepened expertise in Android Background Service tasks, Firebase Firestore, and Material 3 UI components.",
     "screenshots": [
-      "/poster-matric-guru.jpg",
-      "https://play-lh.googleusercontent.com/x2CgSqP0EzOySiLOpk6-tSdpYDnlFd_ptPcgOx9zhqzjji9SJMKpO1zG0Ubfmiy4jz4icpNrdRnDroINygBH=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/Lq_pDLoni_JLn8hy309vV6xSkqJyFHv0bdmpFTzYldi4GN2SI4uVyVDVOw2-ZN3AWpPzGSW6huv2dnwD5ZtSAg=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/fRRdxCDwyN1zUbniV-KgzquMctqlU1O-GKuxOX_kB0zyQFTB-FlYElUc9ReiG89dyHUPC9WkXFSdmHF7wLx4NQ=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/KQomlUgMjYXLwO3JcDYSK7cbp5LKkJsEiq9pLbB0RjkX0MHFjSTjTiqngg15IzIZDcUiAclkdHRTuV7RZh7woQ=w960-h540-rw"
+      "https://play-lh.googleusercontent.com/MOB3ddsJr15lMLwEreKSCk2-zbgSelbXvJxcYsZsct4xlwFO1ySFV-orDvJw1pR2p4qlIjIe8jhKwX0fmyAoUEw=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/7MFKw2X9hwXzW1J1eczirHfZjF4VCHIRmXEsj5WFuMB-6eZ0U1w4PG6aJOtcLjkS0Wx7o3aOPfd0g353CIbz2w=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/qxqGdZsWXUAa4R4Ixsmok6a-hguAm3NyxRRULzcm2-iC4TemDAXglgnO3e8R772BOX6KyHFzLhnNA7aRKAiF=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/yjCJdH7G6YDeFWHOtI5KT2Kgyx1dMK4LpyJmkB8RrsWH8NLz2pL8rhQN1u4GIkgmsxYccamWaNzDWtjSKLLQpPI=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/-73hNRPNKlgXv74vHslpvZbyR3hiSLjalY_je6Ht896dyWjU6bMgwDZ9MUQ5Ev-pDl9EvglUcKllYg3vY0xkLJk=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/YftCGik4drT9i3GNNhYzYuvMRzZzQa5gNE191WxJ2ftjwNYzgwiUjiU6_PqvYG0UlPLp0pXZabS-fuqAqd0zAA=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/vNCKruUyeg7qivBwCux2-OHT3DuybDj4RILuCChAmWaZSBx6SH5WpZAFp3VzRxv3I4u1-2QA5gC7TdjZBfBe=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/HiCpg6aGGCR4cyX9J44EGrBY1Yq_ppHawnk1CapVZi-9UGduHd5Bg_ZsmaTKVfNO2XDYmtWGK0yYXlFLeeM17Q=w1080-h1920-rw"
     ],
     "keywords": [
       "Matric Guru App",
       "9th 10th Class Study Notes",
       "Android Learning Hub",
       "Java Student Notes App"
-    ]
+    ],
+    "privacyPolicyUrl": "https://deesu.org/privacy-policy-of-matric-guru/"
   },
   {
     "slug": "safety-247",
@@ -278,9 +286,9 @@
     "subtitle": "Android Resume & PDF Builder App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://play-lh.googleusercontent.com/ydB8qQgNe631v069SkzuoXBS-DdlQPy7G8GBNgTlEVjikBM7WVhud-SDEqqL1qfc4gOEZByDFmQhuij2_RxYHyg=w960-h540-rw",
-    "shortDescription": "Android application published on Play Store for building and generating resumes and CVs as PDF documents directly on a mobile device.",
-    "fullDescription": "CVForge is a native Android app for creating professional resumes and CVs and exporting them as PDF files, published under the Deesu Training & Education Network developer account on Google Play.",
+    "image": "https://play-lh.googleusercontent.com/pEke3qZ9i8F8nJI32RBLtZBYdMfvAybz5xl7tqQay4Mx0ktYBxL69DE-di3GHAU5q4G_kx3mM6IS52C6v-XcxQ=s0-br30",
+    "shortDescription": "MobiPDF Editor and Scanner gives you a powerful collection of expert tools to quickly and easily view, review, edit, create, and secure PDFs on your phone, wherever you are. \n\nð AI-Powered Scan to PDF\n\nExperience AI-powered scanning with enhanced edge detection and capture clear scans of your paper documents to convert them into editable PDF files.",
+    "fullDescription": "MobiPDF Editor and Scanner gives you a powerful collection of expert tools to quickly and easily view, review, edit, create, and secure PDFs on your phone, wherever you are. \n\nð AI-Powered Scan to PDF\n\nExperience AI-powered scanning with enhanced edge detection and capture clear scans of your paper documents to convert them into editable PDF files. From receipts and contracts to invoices, notes, certificates, reports, IDs, and passports, MobiPDF delivers fast and reliable scanning.\n\nðï¸ Recognize text (OCR)\n\nUtilize OCR technology to recognize text from scans and images and easily share the recognized text by email, messaging apps, or upload it to the cloud.\n\nâï¸ Edit PDF files\n\nAccess one of the most advanced mobile PDF editors on the market and edit PDFs, create blank PDFs, and insert, remove, or modify various document aspects including text, pictures, signatures, comments, drawings, certificates, and more.\n\nâï¸ Fill and Sign\n\nFill out and share forms and sign documents on the go with advanced support for fillable PDFs, enabling you to draw your signature directly on documents or reuse saved electronic signatures while making all the changes you need. \n\nð¨ï¸ Print PDFs\n\nPrint PDF documents wirelessly straight from your phone.\n\nâ Convert PDFs\n\nConvert PDFs to Word, Excel, PowerPoint, or ePub formats while preserving the original layout and formatting, and save Word, Excel, PowerPoint, and ePub files as PDFs for easy sharing. Enjoy reliable conversion of PNG and JPEG images into editable PDF files or use the free PNG and JPEG converter within MobiPDF to easily turn PDF documents into images.\n\nð Protect PDFs\n\nProtect your sensitive documents with passwords to lock, encrypt, and restrict user access and utilize digital certificates for authenticity validation.\n\nâï¸ Back-up your scans and PDFs\n\nLog into your account to access 5GB of free cloud storage on MobiDrive. Upgrade to MobiPDF Premium for an additional 50GB of storage.\n\nð¨ï¸ View and Comment\n\nEnhance your reading experience with MobiPDF&#39;s advanced PDF viewer and easily switch different page modes or enable Read More for distraction-free reading. Easily add comments, use drawing tools, highlight and markup text, insert stamps, or attach files to your PDF.\n\nð Organize pages in PDFs\n\nEnjoy full control over your PDF documents: view, rearrange, insert, delete, extract, duplicate, and rotate pages or merge PDFs into one to create your perfectly organized PDF layout.\n\nUse In-App Purchases to unlock the best mobile scanner and editor experience. Please note:  \n\nâ¢\tAll payments are charged by Google Play Store after you confirm the purchase.\nâ¢\tUnless you cancel at least 24 hours before the end of the current period, your account will be automatically charged for renewal.\nâ¢\tYou can manage your subscriptions by going to your Google Play Account Settings.\n\nNeed more? Check out our free MobiPDF version for Windows desktop - https://mobisystems.com/en-us/mobipdf\n\nHelp Center: https://support.mobisystems.com/hc/en-us/sections/20794400214045-Android\nPrivacy Policy: https://mobisystems.com/en-us/privacy-policy\nTerms of Use: https://mobisystems.com/en-us/terms-of-use",
     "tags": [
       "Java",
       "Android Studio"
@@ -297,16 +305,19 @@
     "challenges": "Producing clean, correctly formatted PDF output natively on Android.",
     "learnings": "Hands-on experience with on-device PDF generation for Android.",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/ydB8qQgNe631v069SkzuoXBS-DdlQPy7G8GBNgTlEVjikBM7WVhud-SDEqqL1qfc4gOEZByDFmQhuij2_RxYHyg=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/tNGrN76p96FDKoqw8pXQEtF9hdgfxWud9xRGRO3lXVHVwfM0OBmkx4LPGXHtcYzilEMA3j_V2dro28hbhgkSCg=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/TzTJNG47ovRgpinCa_Z09wWrKO9m-HUtD10MH6iubySgFXcCw1_rRBuAz2OSnyaBmuqh3pao2rAYdQJSS0ArYw=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/5tfK1Zd3bRmm713o1w7VFMblxMZyH9a_4oiKIM09PEUu5MjZQJUrSp0ChzmNHU0g0hrNmpCPWVTiyrgWQFSwGWA=w960-h540-rw"
+      "https://play-lh.googleusercontent.com/ydB8qQgNe631v069SkzuoXBS-DdlQPy7G8GBNgTlEVjikBM7WVhud-SDEqqL1qfc4gOEZByDFmQhuij2_RxYHyg=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/tNGrN76p96FDKoqw8pXQEtF9hdgfxWud9xRGRO3lXVHVwfM0OBmkx4LPGXHtcYzilEMA3j_V2dro28hbhgkSCg=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/TzTJNG47ovRgpinCa_Z09wWrKO9m-HUtD10MH6iubySgFXcCw1_rRBuAz2OSnyaBmuqh3pao2rAYdQJSS0ArYw=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/5tfK1Zd3bRmm713o1w7VFMblxMZyH9a_4oiKIM09PEUu5MjZQJUrSp0ChzmNHU0g0hrNmpCPWVTiyrgWQFSwGWA=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/-fTZ56syy9WwTUUaH13kgNVM7IsANnuBTjltyXUB7zbQheJLDtQdR8CIO_iXLoBVL8lJtkcUDsxV9OQuw6w7=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/mhtDDCxpIy8jeVFKrIjKOQSTkUPOPwhQ8c1sDNLvQu9BccwGf4GQsLH7PNPnh9743LcAT95jcR0LvVd8jw5e=w1080-h1920-rw"
     ],
     "keywords": [
       "CVForge App",
       "Android Resume Builder",
       "PDF Maker Android App"
-    ]
+    ],
+    "privacyPolicyUrl": "https://deesu.org/privacy-policy-for-cvforge-pdf-resume-maker/"
   },
   {
     "slug": "english-grammar-gamified",
@@ -314,9 +325,9 @@
     "subtitle": "Gamified English Grammar Practice App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://play-lh.googleusercontent.com/cgXldJ0u8FefAvP5BiSEoumbflGHTZC6NznWLG5BoqZ6ZlkK2GOd8fN3DukNs6AMdZZrYZZqHPYbfKd5xuW8BQ=w960-h540-rw",
-    "shortDescription": "Android application published on Play Store offering gamified English grammar lessons and practice tests.",
-    "fullDescription": "Learn English Grammar & Tests is a native Android learning app that turns English grammar practice into gamified lessons and quizzes, published under the Deesu Training & Education Network developer account on Google Play.",
+    "image": "https://play-lh.googleusercontent.com/jm1sp5WS7nZ-3pMFEvjttPcPtgra5VDJM5sL-9WjO0Bz1Rjm6IGXpE0HIFHfo1LgQPibKvgfXiw0l_newUWI=s0-br30",
+    "shortDescription": "21 fun games to help your child learn First Grade lessons! Teach 1st grade lessons like reading, spelling, math, fractions, STEM, science, compound words, contractions, geography, dinosaurs, fossils, animals, and more! Whether they are just starting first grade, or need to review and master the subjects, this is a perfect learning tool for your kids aged 6-8. Math, language, science, STEM, and critical thinking skills are all tested and practiced in these games.\n\nAll 21 games are designed using real 1st Grade curriculums and use core curriculum state standards, so you can be sure these games will help give your child a boost in the classroom.",
+    "fullDescription": "21 fun games to help your child learn First Grade lessons! Teach 1st grade lessons like reading, spelling, math, fractions, STEM, science, compound words, contractions, geography, dinosaurs, fossils, animals, and more! Whether they are just starting first grade, or need to review and master the subjects, this is a perfect learning tool for your kids aged 6-8. Math, language, science, STEM, and critical thinking skills are all tested and practiced in these games.\n\nAll 21 games are designed using real 1st Grade curriculums and use core curriculum state standards, so you can be sure these games will help give your child a boost in the classroom. Plus your student or child will stay entertained with help voice narration, colorful images and animations, and lots of fun sounds and music. Improve your child&#39;s homework with these teacher approved lessons, including science, STEM, language, and math.\n\nGames: \nâ¢ Patterns - Learn to identify repeating patterns, a critical skill for first grade\nâ¢ Ordering - Place objects in order based on size, numbers, and letters\nâ¢ Word Bingo - Help your first grader with reading and spelling skills in a fun bingo game\nâ¢ Compound Words - Combine words to build compound words, important for 1st Grade!\nâ¢ Advanced Counting - Skip count by 2&#39;s, 3&#39;s, 4&#39;s, 5&#39;s, 10&#39;s and more\nâ¢ Add, Subtract, and Advanced Math - Help learn advanced math skills like additional and subtraction with fun falling fruit\nâ¢ Contractions - Teach your 1st Grader how to combine words to make contractions\nâ¢ Spelling - Learn how to spell hundreds of words with helpful voice assistance\nâ¢ Fractions - Fun way to learn the visual representation of fractions\nâ¢ Verbs, Nouns, Adjectives - Your child will learn different types of words like verbs, nouns, and adjectives\nâ¢ Sight Words - Learn how to spell and recognize important 1st grade sight words\nâ¢ Compare Numbers - Advanced math topic that compares numbers to see what is greater or less than\nâ¢ 5 Senses - Learn the 5 senses, how they help us understand the world, and which body part each uses\nâ¢ Geography - Identify the oceans, continents, and various types of landforms\nâ¢ Animals - Classify and learn about a variety of animals, such as mammals, reptiles, birds, fish, and more\nâ¢ Body Parts - Learn and identify all the body parts on the human body, and learn how diagrams work\nâ¢ Photosynthesis - Help the plant conduct photosynthesis and learn about the process vital for all plant life\nâ¢ Dinosaurs and Fossils - Identify different dinosaurs and learn about how we can learn about dinosaurs from fossils\nâ¢ Timed Math Facts - Quickly answer math facts to earn basketballs\nâ¢ Reading Basics - Read articles, answers questions, and get help with tough words\nâ¢ Cause &amp; Effect - Listen and match a cause with the correct effect\n\nPerfect for 1st grade children, kids, and students who need a fun and entertaining educational game to play. This bundle of games lets them learn important math, fraction, problem solving, sight word, spelling, science and language skills while having fun! First Grade teachers around the country use this app in their classroom to help reinforce math, language, and STEM subjects. Keep your first grade age child entertained while they are learning!\n\nAges: 6, 7, and 8 year old children and students.\n\n=====================================\n\nPROBLEMS WITH THE GAME? \nIf you are having issues with the sound stopping, or any other problems with the game, please email us at help@rosimosi.com and we will get it fixed for you ASAP.\n\nLEAVE US A REVIEW!\nIf you&#39;re enjoying the game then we&#39;d love for you to leave us a review! Reviews help small developers like us keep improving this game.",
     "tags": [
       "Java",
       "Android Studio"
@@ -333,16 +344,20 @@
     "challenges": "Structuring grammar content into an engaging, gamified quiz flow.",
     "learnings": "Experience designing gamified educational content for Android.",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/cgXldJ0u8FefAvP5BiSEoumbflGHTZC6NznWLG5BoqZ6ZlkK2GOd8fN3DukNs6AMdZZrYZZqHPYbfKd5xuW8BQ=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/649Zop5wctdyIMGtjYEpX-AJCSHJLwt_PisQ3PNJc7bYkk828bsDvB6HDiqk7ZofTjhyM0c031eUn0sp421lEFE=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/x012VZYd57Otli6lmMTjssfOkrY4b8se8o1ZC0Mh22yR8kEohenO_i-mxdJYIy0bLEXFwr5VrJXDPGpcuEIHqQ=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/_2_qhx31R6_nCXRSQjp40jIm35D78-Gu4uoRZBYit10pLERxHyaI4RIbUkq-AZ5VgI6VH0mqBZIYRKs99KjzOHk=w960-h540-rw"
+      "https://play-lh.googleusercontent.com/cgXldJ0u8FefAvP5BiSEoumbflGHTZC6NznWLG5BoqZ6ZlkK2GOd8fN3DukNs6AMdZZrYZZqHPYbfKd5xuW8BQ=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/649Zop5wctdyIMGtjYEpX-AJCSHJLwt_PisQ3PNJc7bYkk828bsDvB6HDiqk7ZofTjhyM0c031eUn0sp421lEFE=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/x012VZYd57Otli6lmMTjssfOkrY4b8se8o1ZC0Mh22yR8kEohenO_i-mxdJYIy0bLEXFwr5VrJXDPGpcuEIHqQ=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/_2_qhx31R6_nCXRSQjp40jIm35D78-Gu4uoRZBYit10pLERxHyaI4RIbUkq-AZ5VgI6VH0mqBZIYRKs99KjzOHk=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/iilH6YuuMR8BqRwZzRubJAMta9rwUDa1ElkYNuNeE9aeaAKb7-TXObV10d3X3uXhkk4E2CF26OLMWhssYkZnUw=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/qdr75mD-0TUce_PmXTBdhB3NtHh5Z_gLfuncAIsqG_5DWkCX13w2xmS0nYlP92YurL_EggUUVFyyBouJawonvw=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/-qSFrpxVzrivgVKe5d_NKV0eOsNmT-i9e5H2EXHWYBMXR6VleztHIc0pnIshUu7cA4TEWGUnemgDb-tkFnHMYg=w1080-h1920-rw"
     ],
     "keywords": [
       "Learn English Grammar App",
       "Android Grammar Test App",
       "Gamified English Learning"
-    ]
+    ],
+    "privacyPolicyUrl": "https://deesu.org/privacy-policy-for-english-grammar-gamified/"
   },
   {
     "slug": "interactive-math-learn",
@@ -350,9 +365,9 @@
     "subtitle": "Gamified Math Practice & Testing App",
     "category": "Android",
     "status": "Completed",
-    "image": "https://play-lh.googleusercontent.com/dAyvIlBUlkOlqOaIR6YetBv1KMJLB5lm88iGawxwtJNNYry5N5mbG_hbjO8PX1kA37dC07-WWDEo5uH8WKxvREI=w960-h540-rw",
-    "shortDescription": "Android application published on Play Store offering interactive, gamified math practice and testing.",
-    "fullDescription": "Interactive Math Learn & Test is a native Android learning app for practicing math through interactive, gamified exercises and tests, published under the Deesu Training & Education Network developer account on Google Play.",
+    "image": "https://play-lh.googleusercontent.com/Xlfhtfmg31s6t_AeagEk361l10AACm1fYTtnnjWp9FQdgpOZUpfqLb9OI2McMaASXkwYCPu1yi5jERhDxFRF=s0-br30",
+    "shortDescription": "Schools: if you use Google Suite for Education, a school version which can be easily deployed is available. Please contact us at support@lescapadou.com for more information.\n\n** Editor&#39;s Choice Award (96/100) - Children&#39;s Technology Review ** \n\nCursive Writing Wizard is the perfect app to help every child learn how to trace their ABC&#39;s, 123&#39;s and custom words (such as their names) through a fun system carefully designed to maintain motivation.",
+    "fullDescription": "Schools: if you use Google Suite for Education, a school version which can be easily deployed is available. Please contact us at support@lescapadou.com for more information.\n\n** Editor&#39;s Choice Award (96/100) - Children&#39;s Technology Review ** \n\nCursive Writing Wizard is the perfect app to help every child learn how to trace their ABC&#39;s, 123&#39;s and custom words (such as their names) through a fun system carefully designed to maintain motivation. \n\nFeatures:\nâ¢ Show and enforce how to trace letters and words correctly\nâ¢ 3 most popular US fonts (ZB, DN &amp; HWT) + UK , French and Swiss fonts\nâ¢ Fun tracing using 50+ animated stickers, sound effects and interactive games that animate letters at the end of tracing\nâ¢ Uppercase &amp; lowercase letters, numbers and words\nâ¢ Ability to create your own word lists (and record audio for each word)\nâ¢ Fully customizable to suit every childâs needs (letter size, difficulty,...)\nâ¢ Check progress thanks to reports that display what the child has traced\nâ¢ Shapes tracing activity for toddlers\nâ¢ Left-Handed Mode\nâ¢ Create Worksheets and print them to help your child to write on paper\n\nSuitable for kindergarten, toddlers, early learners, preschool and 1st grade kids, Writing Wizard  is an award-winning app used in many schools in the US ! \n\n-&gt; if you want to test the app first, try our free demo !\n\n_______\n\nPERFECT FOR KIDS\n\nKids want to have fun, and Writing Wizard offers a lot of fun to keep them motivated in learning writing! \n\nâ¢ Kids learn trace letters, numbers and shapes using 50+ animated stickers and sound effects\nâ¢ Once tracing is complete, kids can interact with them on 4 games that animate letters\nâ¢ Children can trace any word and record their own voice for each word (write their name and hear it when tracing)\nâ¢ Preschool kids learn the whole alphabet with letter sound and letter name: they learn the appearance and pronunciation of each letter, they trace the letter and hear the sound at the same time\nâ¢ Kids can collect stars in 5-Stars play mode and have fun succeeding modes increasingly difficult\nâ¢ Early learners have five practice options: capital letters, lower-case letters, numbers, shapes or practicing full words\n_______\n\nPERFECT FOR PARENTS &amp; TEACHERS\n\nâ¢ Ability to create your own word lists (and record audio for each word)\nâ¢ Detailed reports provide information on what kids have done, including the ability to replay and export the tracings to view kids&#39; progress\nâ¢ Share word lists \nâ¢ Multiple parameters to customize the app according to childâs current education level (letter size, difficulty, show/hide model, allow to stop between key points, etc.)\nâ¢ Letter names and letter sounds (which can be customized)\nâ¢ A customizable 5-Stars play mode to maintain motivation and fun \nâ¢ Create an unlimited number of users\n\n_______\n\nKNOW WHAT&#39;S INSIDE\n\nAs a Moms with Apps member, we follow the &quot;Know what&#39;s inside&quot; best practices for kidsâ apps.\nLâEscapadou takes childrenâs privacy seriously. We believe you should not have to worry about your kids being tracked by apps or websites. This app:\nâ¢ Does not contains ads (except for our own apps which are listed in a child protected section)\nâ¢ Does not collect any user information\nâ¢ Does not contain in-app purchases (except for school licences)\nâ¢ Protected External Links (a multiplication must be solved).",
     "tags": [
       "Java",
       "Android Studio"
@@ -369,15 +384,19 @@
     "challenges": "Designing interactive math exercises that stay engaging across difficulty levels.",
     "learnings": "Experience building gamified, interactive learning flows for Android.",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/dAyvIlBUlkOlqOaIR6YetBv1KMJLB5lm88iGawxwtJNNYry5N5mbG_hbjO8PX1kA37dC07-WWDEo5uH8WKxvREI=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/e_8mrS4hUEAnWbNf_1jF87WOJUoZQNm_8yCwGxIdAT8D1eGSr2ey0F3IwJVvL1goBJxW5qF3WTUDsYrc_kiyOq4=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/FSDe5u-Nk7QLkL2a5A-XnPAfTq9j8aveNDL8IDSa37Wd4obU0bripU-Bwx9CxE2obhGO3xkrA2YIZn1njHwQ=w960-h540-rw",
-      "https://play-lh.googleusercontent.com/eu47wq9tbrR3_JaIsbdPC8zvdbtE8LVXJAUWu6dVSkbFOpQ1bk98f88pfOiCnBkI9tekJtroUaHdYWE8ltp9qII=w960-h540-rw"
+      "https://play-lh.googleusercontent.com/dAyvIlBUlkOlqOaIR6YetBv1KMJLB5lm88iGawxwtJNNYry5N5mbG_hbjO8PX1kA37dC07-WWDEo5uH8WKxvREI=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/e_8mrS4hUEAnWbNf_1jF87WOJUoZQNm_8yCwGxIdAT8D1eGSr2ey0F3IwJVvL1goBJxW5qF3WTUDsYrc_kiyOq4=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/FSDe5u-Nk7QLkL2a5A-XnPAfTq9j8aveNDL8IDSa37Wd4obU0bripU-Bwx9CxE2obhGO3xkrA2YIZn1njHwQ=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/eu47wq9tbrR3_JaIsbdPC8zvdbtE8LVXJAUWu6dVSkbFOpQ1bk98f88pfOiCnBkI9tekJtroUaHdYWE8ltp9qII=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/Gcal3SPUM95cXaeG_BDB09YKyJfkrM_snb3oCmOW7-1jPIMxs1EfASRt_zEJkWBZbWh2KU0fzNmhTSXj0DZg0g=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/kkG_bLJ70-R_raztbjdlrNPEwfwQeeXo0_HNMrmPVL4MPji7ykNUfQmv8icyz8Wx2Qbrbi49H8_VgRGNuVAr=w1080-h1920-rw",
+      "https://play-lh.googleusercontent.com/keZf2vsJJ8L4F9JiVIeAvSstnGTso_U7he4TXhKTL8pQEO0FdDqa0Yb1zuc_dZLi11VxwydZyGsEkw8T4bKN=w1080-h1920-rw"
     ],
     "keywords": [
       "Interactive Math App",
       "Android Math Test App",
       "Gamified Math Learning"
-    ]
+    ],
+    "privacyPolicyUrl": "https://deesu.org/privacy-policy/"
   }
 ]

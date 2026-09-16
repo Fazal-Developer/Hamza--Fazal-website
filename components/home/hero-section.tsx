@@ -64,14 +64,12 @@ export function HeroSection() {
               <span className="text-accent">Available for work</span>
             </div>
 
-            <div>
-              <p className="text-2xl font-black leading-none tracking-tight text-foreground sm:text-3xl">
+            <h1 className="text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+              <span className="block text-2xl font-black leading-none tracking-tight text-foreground sm:text-3xl mb-2">
                 Hi, I&apos;m
-              </p>
-              <h1 className="mt-2 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
-                <span className="text-gradient-accent">Muhammad Hamza Fazal</span>
-              </h1>
-            </div>
+              </span>
+              <span className="text-gradient-accent">Muhammad Hamza Fazal</span>
+            </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               <span className="font-semibold text-foreground">Android Developer &middot; Web Developer &middot; Digital Marketer.</span>{' '}

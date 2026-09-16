@@ -75,17 +75,43 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     ],
   }
 
+  const jsonLdSoftware = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: project.title,
+    applicationCategory:
+      project.category === 'Android'
+        ? 'MobileApplication'
+        : 'WebApplication',
+    operatingSystem: project.category === 'Android' ? 'Android' : 'All',
+    description: project.shortDescription,
+    image: project.image,
+    author: {
+      '@type': 'Person',
+      name: 'Muhammad Hamza Fazal',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  }
+
   return (
-    <div className="mx-auto max-w-5xl px-5 pb-12 pt-28 md:px-8 md:pb-20 md:pt-36 space-y-16">
+    <div className="mx-auto max-w-5xl px-5 pt-32 pb-28 md:px-8 md:pt-40 md:pb-36 space-y-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSoftware) }}
       />
 
       {/* Back Link */}
       <Link
         href="/projects"
-        className="inline-flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors"
+        className="inline-flex items-center gap-2 text-xs font-mono font-bold text-muted-foreground hover:text-foreground transition-colors"
       >
         <ArrowLeft className="h-4 w-4" />
         <span>Back to Projects Catalog</span>
@@ -107,11 +133,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </h1>
         <p className="text-xl font-bold text-muted-foreground">{project.subtitle}</p>
 
-        <p className="text-base leading-relaxed text-muted-foreground pt-2">
+        <div className="text-base leading-relaxed text-muted-foreground pt-2 whitespace-pre-line space-y-4">
           {project.fullDescription}
-        </p>
+        </div>
 
-        {/* Links */}
+        {/* Action Links */}
         <div className="flex flex-wrap items-center gap-4 pt-4">
           {project.playStoreUrl && (
             <a
@@ -122,6 +148,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             >
               <PlayCircle className="h-4 w-4" />
               <span>Get it on Play Store</span>
+            </a>
+          )}
+          {project.privacyPolicyUrl && (
+            <a
+              href={project.privacyPolicyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-xs font-bold text-foreground hover:bg-secondary transition-colors"
+            >
+              <ShieldCheck className="h-4 w-4 text-accent" />
+              <span>Privacy Policy</span>
+              <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground" />
             </a>
           )}
           {project.liveUrl && (
@@ -138,11 +176,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      {/* Cover Image */}
+      {/* Cover Image / Featured Graphic */}
       <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
         <img
           src={project.image}
-          alt={`${project.title} Case Study Preview — Muhammad Hamza Fazal`}
+          alt={`${project.title} Featured Banner — Muhammad Hamza Fazal`}
           className="aspect-[16/9] w-full object-cover"
         />
       </div>
@@ -211,6 +249,31 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </div>
 
+      {/* Official Privacy Policy Card */}
+      {project.privacyPolicyUrl && (
+        <div className="rounded-3xl border border-border/80 bg-card/60 p-8 backdrop-blur-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t pt-12">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-accent uppercase">
+              <ShieldCheck className="h-4 w-4 text-emerald-500" />
+              <span>Compliance &amp; User Privacy</span>
+            </div>
+            <h3 className="text-lg font-bold text-foreground">Official App Privacy Policy</h3>
+            <p className="text-xs text-muted-foreground max-w-xl">
+              This application complies with Google Play Developer Program Policies, user data safety standards, and transparent privacy disclosures.
+            </p>
+          </div>
+          <a
+            href={project.privacyPolicyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-xs font-mono font-bold text-foreground hover:border-accent/60 transition-colors shrink-0"
+          >
+            <span>Read Privacy Policy</span>
+            <ArrowUpRight className="h-3.5 w-3.5 text-accent" />
+          </a>
+        </div>
+      )}
+
       {/* Tech Stack Tags */}
       <div className="space-y-4 border-t border-border pt-12">
         <h3 className="text-base font-bold text-foreground">Technologies Used in This Case Study:</h3>
@@ -228,7 +291,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="space-y-6 border-t border-border pt-12">
           <div className="flex items-center gap-2 text-xs font-mono font-bold text-accent uppercase tracking-widest">
             <ImageIcon className="h-4 w-4" />
-            <span>Project Visual Gallery</span>
+            <span>Official Play Store Visual Gallery ({project.screenshots.length} Screenshots)</span>
           </div>
           <div className="mx-auto max-w-2xl">
             <ScreenshotSlideshow images={project.screenshots} alt={`${project.title} App Screenshot`} />

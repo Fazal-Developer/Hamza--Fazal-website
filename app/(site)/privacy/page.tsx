@@ -4,6 +4,9 @@ import { PERSONAL_INFO } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Hamza Fazal',
   description: 'Privacy policy for the official personal brand portfolio of Muhammad Hamza Fazal.',
+  alternates: {
+    canonical: `${PERSONAL_INFO.siteUrl}/privacy`,
+  },
 }
 
 export default function PrivacyPage() {

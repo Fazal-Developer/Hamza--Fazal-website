@@ -15,8 +15,8 @@ const CAPABILITIES = [
 export function AboutSection() {
   return (
     <section id="about" className="relative mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
-      <AnimatedHeading className="max-w-2xl text-3xl font-black tracking-tight text-foreground sm:text-4xl md:text-5xl">
-        Building digital experiences with code.
+      <AnimatedHeading as="h1" className="max-w-3xl text-3xl font-black tracking-tight text-foreground sm:text-4xl md:text-5xl">
+        About Muhammad Hamza Fazal — Building digital experiences with code.
       </AnimatedHeading>
 
       <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-6">
